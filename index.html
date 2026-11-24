@@ -46,7 +46,7 @@
   header {
     background: linear-gradient(135deg, #0f172a 0%, #0f4c81 100%);
     color: #fff;
-    padding: 12px 20px;
+    padding: 11px 20px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -60,7 +60,7 @@
     gap: 12px;
     flex-wrap: wrap;
     max-width: 1280px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 9px auto;
   }
 
   .brand {
@@ -70,28 +70,28 @@
   }
 
   .brand-icon {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border-radius: 10px;
     background: rgba(255,255,255,0.14);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 21px;
     cursor: pointer;
     user-select: none;
   }
 
   .brand h1 {
     margin: 0;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
 
   .brand p {
     margin: 0;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     color: #bae6fd;
   }
 
@@ -100,13 +100,13 @@
     align-items: center;
     gap: 12px;
     background: rgba(255,255,255,0.12);
-    padding: 6px 14px;
+    padding: 5px 14px;
     border-radius: 999px;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
   }
 
   .progress-bar-wrap {
-    width: 130px;
+    width: 120px;
     height: 8px;
     background: rgba(255,255,255,0.22);
     border-radius: 999px;
@@ -134,9 +134,9 @@
     background: rgba(255,255,255,0.1);
     color: #e2e8f0;
     border: 1px solid rgba(255,255,255,0.16);
-    padding: 8px 14px;
+    padding: 7px 13px;
     border-radius: 10px;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -177,7 +177,7 @@
   /* Main Container */
   main {
     max-width: 1280px;
-    margin: 18px auto 40px auto;
+    margin: 16px auto 40px auto;
     padding: 0 16px;
   }
 
@@ -198,10 +198,10 @@
   .card {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 20px 22px;
+    padding: 18px 22px;
     box-shadow: var(--shadow);
     border: 1px solid #e2e8f0;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .card-header {
@@ -209,14 +209,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    margin-bottom: 14px;
-    padding-bottom: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #e2e8f0;
   }
 
   .card-title {
     margin: 0;
-    font-size: 1.12rem;
+    font-size: 1.08rem;
     font-weight: 700;
     color: var(--primary-dark);
     display: flex;
@@ -225,7 +225,7 @@
   }
 
   .pill-tag {
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -233,6 +233,7 @@
     border-radius: 999px;
     background: var(--primary-light);
     color: var(--primary);
+    white-space: nowrap;
   }
 
   .pill-tag.quiz {
@@ -243,19 +244,30 @@
   .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
-  }
-
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 16px;
   }
 
   @media (max-width: 900px) {
-    .grid-2, .grid-3 {
+    .grid-2 {
       grid-template-columns: 1fr;
     }
+  }
+
+  /* Circled Number Badges */
+  .num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-right: 6px;
+    flex-shrink: 0;
+    vertical-align: middle;
   }
 
   /* Buttons */
@@ -264,14 +276,14 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 10px 16px;
+    padding: 9px 15px;
     border-radius: 10px;
     border: 1px solid transparent;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
-    min-height: 42px;
+    min-height: 40px;
     user-select: none;
   }
 
@@ -310,11 +322,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 12px;
+    padding: 11px;
     background: var(--surface-alt);
     border: 1px dashed var(--border);
     border-radius: 12px;
-    min-height: 54px;
+    min-height: 50px;
     margin-bottom: 12px;
   }
 
@@ -322,9 +334,9 @@
     background: #fff;
     border: 2px solid var(--accent);
     color: var(--primary-dark);
-    padding: 7px 13px;
+    padding: 6px 13px;
     border-radius: 999px;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
@@ -349,14 +361,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 130px;
-    min-height: 36px;
+    min-width: 135px;
+    min-height: 34px;
     padding: 4px 10px;
     border: 2px dashed #94a3b8;
     border-radius: 8px;
     background: #f8fafc;
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
@@ -390,15 +402,15 @@
   /* Inline Cloze Selects */
   select.cloze-select {
     font-family: inherit;
-    font-size: 0.92rem;
+    font-size: 0.91rem;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 4px 9px;
     border-radius: 8px;
     border: 2px solid #94a3b8;
     background: #f8fafc;
     color: var(--primary-dark);
     cursor: pointer;
-    min-height: 36px;
+    min-height: 34px;
     margin: 2px 3px;
   }
 
@@ -414,12 +426,22 @@
     color: var(--error);
   }
 
+  .heft-inline-text {
+    display: none;
+    font-weight: 700;
+    color: var(--primary-dark);
+    background: #e0f2fe;
+    padding: 1px 7px;
+    border-radius: 5px;
+    border-bottom: 2px solid var(--accent);
+  }
+
   /* Feedback Banners */
   .feedback {
     margin-top: 12px;
-    padding: 12px 15px;
+    padding: 11px 14px;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 0.89rem;
     display: none;
   }
 
@@ -445,12 +467,12 @@
     display: block;
     width: 100%;
     text-align: left;
-    padding: 12px 15px;
+    padding: 11px 14px;
     margin-bottom: 8px;
     border: 2px solid #e2e8f0;
     border-radius: 10px;
     background: #fff;
-    font-size: 0.93rem;
+    font-size: 0.91rem;
     cursor: pointer;
     transition: all 0.15s;
     color: var(--text);
@@ -480,83 +502,137 @@
     color: #7f1d1d;
   }
 
-  /* Station 2 Tree Layout */
-  .tree-wrapper {
+  /* ==================== STATION 2: EXACT TREE DIAGRAM ==================== */
+  .tree-diagram {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    padding: 10px 0;
+    width: 100%;
+    padding: 8px 0;
   }
 
-  .tree-node {
-    background: #fff;
-    border: 2px solid var(--primary);
+  .tree-root {
+    background: #0f4c81;
+    color: #fff;
+    border: 2px solid #093256;
     border-radius: 10px;
-    padding: 8px 18px;
+    padding: 8px 26px;
     font-weight: 700;
-    color: var(--primary-dark);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
 
-  .tree-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    flex-wrap: wrap;
+  .tree-stem-v {
+    width: 2px;
+    height: 18px;
+    background: #475569;
   }
 
-  .bucket-grid {
+  .tree-branch-bar {
+    width: 52%;
+    height: 2px;
+    background: #475569;
+  }
+
+  .tree-level-2 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     width: 100%;
+    gap: 10px;
   }
 
-  @media (max-width: 960px) {
-    .bucket-grid { grid-template-columns: repeat(2, 1fr); }
+  .tree-mid-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .bucket {
-    border: 2px solid #cbd5e1;
+  .tree-box-mid {
+    background: #fff;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    padding: 7px 22px;
+    font-weight: 700;
+    font-size: 0.96rem;
+    color: #0f172a;
+    text-align: center;
+  }
+
+  .tree-transition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: #475569;
+    font-weight: 700;
+  }
+
+  .tree-sub-split {
+    width: 52%;
+    height: 2px;
+    background: #475569;
+  }
+
+  .tree-level-3-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 100%;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .tree-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .tree-leaf {
+    border: 2px solid #64748b;
     border-radius: 12px;
     background: #f8fafc;
     padding: 10px;
-    min-height: 170px;
+    min-height: 185px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: all 0.15s;
   }
 
-  .bucket:hover {
+  .tree-leaf:hover {
     border-color: var(--accent);
     background: #f0f9ff;
   }
 
-  .bucket h4 {
-    margin: 0 0 8px 0;
+  .tree-leaf-title {
+    font-weight: 700;
     font-size: 0.9rem;
     text-align: center;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #cbd5e1;
+    margin-bottom: 4px;
+  }
+
+  .tree-leaf-zb {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 6px;
   }
 
   .bucket-items {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 5px;
     flex: 1;
   }
 
   .placed-item {
-    padding: 6px 10px;
-    border-radius: 8px;
+    padding: 5px 9px;
+    border-radius: 7px;
     background: #fff;
     border: 1px solid #94a3b8;
-    font-size: 0.84rem;
+    font-size: 0.83rem;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -575,7 +651,16 @@
     color: var(--error);
   }
 
-  /* Station 4 Chemie-Mobile Beakers */
+  @media (max-width: 960px) {
+    .tree-level-2, .tree-level-3-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .tree-branch-bar, .tree-sub-split {
+      display: none;
+    }
+  }
+
+  /* Station 4 Stoff- und Teilchenebene Cards */
   .mobile-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -610,9 +695,27 @@
   }
 
   .beaker-title {
-    font-size: 0.8rem;
+    font-size: 0.83rem;
     font-weight: 700;
-    color: var(--text-muted);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  /* Hefteintrag Box at Bottom of Lessons 1-3 */
+  .heft-unlock-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #38bdf8;
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   /* Station Navigation Footer */
@@ -620,91 +723,95 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 18px;
     padding-top: 14px;
     border-top: 1px solid #cbd5e1;
   }
 
-  /* Heft-Sicherung & Screenshot Mode */
-  .heft-sheet {
+  /* ==================== HEFTEINTRAG MODE ==================== */
+  .heft-banner {
+    display: none;
     background: #ffffff;
-    border: 2px solid #0f4c81;
-    border-radius: 14px;
-    padding: 22px 26px;
-    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.1);
-  }
-
-  .heft-header {
-    display: flex;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    margin-bottom: 14px;
     justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 2px solid #0f4c81;
-    padding-bottom: 10px;
-    margin-bottom: 16px;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    box-shadow: var(--shadow);
   }
 
-  .heft-section {
-    margin-bottom: 14px;
-    padding: 12px 15px;
-    background: #f8fafc;
-    border-left: 4px solid #0284c7;
-    border-radius: 0 10px 10px 0;
+  body.heft-mode .heft-banner {
+    display: flex;
   }
 
-  .heft-section h3 {
-    margin: 0 0 6px 0;
-    font-size: 1rem;
-    color: #0f4c81;
-  }
-
-  .heft-section p, .heft-section li {
-    margin: 3px 0;
-    font-size: 0.9rem;
-  }
-
-  .heft-formula {
-    background: #fff;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-weight: 700;
-    text-align: center;
-    margin: 8px 0;
-    color: #0f172a;
-    font-size: 0.96rem;
-  }
-
-  body.screenshot-mode header,
-  body.screenshot-mode .no-screenshot {
+  body.heft-mode .no-heft,
+  body.heft-mode .chip-pool,
+  body.heft-mode .feedback,
+  body.heft-mode .station-footer,
+  body.heft-mode .heft-unlock-box,
+  body.heft-mode .lzk-card {
     display: none !important;
   }
 
-  body.screenshot-mode main {
-    margin: 10px auto;
-    max-width: 1120px;
+  body.heft-mode select.cloze-select {
+    display: none !important;
   }
 
-  .exit-screenshot-bar {
+  body.heft-mode .heft-inline-text {
+    display: inline !important;
+  }
+
+  body.heft-mode .drop-slot {
+    border-style: solid;
+    border-color: var(--primary);
+    background: #e0f2fe;
+    color: var(--primary-dark);
+    cursor: default;
+  }
+
+  body.heft-mode .placed-item {
+    background: #fff;
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    cursor: default;
+  }
+
+  body.heft-mode .placed-item .del-x {
+    display: none;
+  }
+
+  body.heft-mode .card {
+    border: 1.5px solid #94a3b8;
+    box-shadow: none;
+  }
+
+  /* Fullscreen screenshot hides top header and banner buttons */
+  body.fullscreen-shot header,
+  body.fullscreen-shot .heft-banner-actions {
+    display: none !important;
+  }
+
+  .exit-shot-pill {
     display: none;
     position: fixed;
-    bottom: 14px;
-    right: 14px;
+    bottom: 12px;
+    right: 12px;
     z-index: 999;
+    opacity: 0.92;
   }
 
-  body.screenshot-mode .exit-screenshot-bar {
+  body.fullscreen-shot .exit-shot-pill {
     display: block;
   }
 
   @media print {
-    header, .no-screenshot, .exit-screenshot-bar {
+    header, .heft-banner-actions, .exit-shot-pill, .no-heft, .chip-pool, .feedback, .station-footer, .heft-unlock-box, .lzk-card {
       display: none !important;
     }
     body { background: #fff; }
-    main { margin: 0; padding: 0; max-width: 100%; }
-    .heft-sheet { border: 1px solid #333; box-shadow: none; padding: 14px; }
   }
 </style>
 </head>
@@ -728,45 +835,62 @@
   </div>
   <nav class="nav-tabs" id="navTabs">
     <button class="nav-tab active" data-target="st1" onclick="switchStation('st1')">
-      1. Versuch &amp; Stoffebene <span class="badge" id="badge-st1">0/4</span>
+      1. Experiment <span class="badge" id="badge-st1">0/3</span>
     </button>
     <button class="nav-tab" data-target="st2" onclick="switchStation('st2')">
       2. Stoffeinteilung <span class="badge" id="badge-st2">0/2</span>
     </button>
     <button class="nav-tab" data-target="st3" onclick="switchStation('st3')">
-      3. Dalton-Atommodell <span class="badge" id="badge-st3">0/3</span>
+      3. Dalton-Atommodell <span class="badge" id="badge-st3">0/4</span>
     </button>
     <button class="nav-tab" data-target="st4" onclick="switchStation('st4')">
-      4. Chemie-Mobile <span class="badge" id="badge-st4">0/2</span>
+      4. Stoff- und Teilchenebene <span class="badge" id="badge-st4">0/2</span>
     </button>
     <button class="nav-tab" data-target="st5" onclick="switchStation('st5')">
-      5. Check &amp; Hefteintrag <span class="badge" id="badge-st5">Heft</span>
+      5. Abschlusscheck <span class="badge" id="badge-st5">Check</span>
     </button>
   </nav>
 </header>
 
-<div class="exit-screenshot-bar">
-  <button class="btn btn-primary" onclick="toggleScreenshotMode()">✕ Screenshot-Ansicht beenden</button>
+<div class="exit-shot-pill">
+  <button class="btn btn-primary btn-sm" onclick="toggleFullscreenShot()">✕ Screenshot-Modus beenden</button>
 </div>
 
 <main>
 
-  <!-- ==================== STATION 1 ==================== -->
+  <!-- Hefteintrag Top Banner (shown in Hefteintrag mode for Lessons 1, 2, 3) -->
+  <div class="heft-banner" id="heftBanner">
+    <div>
+      <div style="font-size:0.75rem; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em;">Chemie 9 (SG) · Hefteintrag</div>
+      <h2 id="heftBannerTitle" style="margin:2px 0 0 0; font-size:1.22rem; color:#0f172a;">Hefteintrag</h2>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+      <div style="font-size:0.86rem; color:#334155;">
+        <strong>Name:</strong> <input type="text" id="heftNameInput" placeholder="Dein Name" style="border:none; border-bottom:1.5px solid #64748b; font-size:0.88rem; font-weight:600; width:150px; padding:2px 4px; background:transparent;">
+        &nbsp;·&nbsp; <strong>Datum:</strong> <span id="heftDateSpan"></span>
+      </div>
+      <div class="heft-banner-actions" style="display:flex; gap:8px;">
+        <button class="btn btn-primary btn-sm" onclick="toggleFullscreenShot()">📸 Vollbild für Screenshot</button>
+        <button class="btn btn-outline btn-sm" onclick="exitHeftMode()">✕ Zurück zur Übung</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 1. EXPERIMENT ==================== -->
   <section class="station active" id="st1">
     <div class="grid-2">
-      <!-- Left: Interactive Hofmann Apparatus -->
+      <!-- Left: Interactive Hofmann Apparatus with Numbered Markers 1-8 -->
       <div class="card">
         <div class="card-header">
-          <h2 class="card-title">🔬 Simulation: Hofmannscher Wasserzersetzungsapparat</h2>
-          <span class="pill-tag">Versuch</span>
+          <h2 class="card-title">🔬 Hofmannscher Wasserzersetzungsapparat</h2>
+          <span class="pill-tag no-heft">Simulation</span>
         </div>
-        <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
+        <p class="no-heft" style="font-size:0.87rem; color:var(--text-muted); margin-top:0;">
           Schalte die Gleichstromquelle ein, beobachte die Gasentwicklung in beiden Schenkeln und führe anschließend oben an den Hähnen die <strong>Gasnachweise</strong> durch!
         </p>
 
-        <div style="display:flex; justify-content:center; margin:8px 0;">
-          <svg id="hofmannSvg" viewBox="0 0 460 365" style="width:100%; max-width:440px; height:auto; background:#f8fafc; border-radius:12px; border:1px solid #e2e8f0;">
-            <!-- Background Grid lines for volume scale -->
+        <div style="display:flex; justify-content:center; margin:6px 0;">
+          <svg id="hofmannSvg" viewBox="0 0 480 375" style="width:100%; max-width:460px; height:auto; background:#f8fafc; border-radius:12px; border:1px solid #e2e8f0;">
             <defs>
               <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.85"/>
@@ -774,108 +898,147 @@
               </linearGradient>
             </defs>
 
-            <!-- Gas space (white/tinted) behind water -->
             <!-- Left tube (Pluspol - Oxygen, max 15mL -> drops 55px) -->
-            <rect x="85" y="55" width="32" height="225" rx="4" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
+            <rect x="95" y="60" width="32" height="225" rx="4" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
             <!-- Right tube (Minuspol - Hydrogen, max 30mL -> drops 110px) -->
-            <rect x="343" y="55" width="32" height="225" rx="4" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
+            <rect x="353" y="60" width="32" height="225" rx="4" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
 
             <!-- Water in Left Tube -->
-            <rect id="waterLeft" x="86.5" y="65" width="29" height="214" fill="url(#waterGrad)"/>
+            <rect id="waterLeft" x="96.5" y="70" width="29" height="214" fill="url(#waterGrad)"/>
             <!-- Water in Right Tube -->
-            <rect id="waterRight" x="344.5" y="65" width="29" height="214" fill="url(#waterGrad)"/>
+            <rect id="waterRight" x="354.5" y="70" width="29" height="214" fill="url(#waterGrad)"/>
 
             <!-- Horizontal connecting bridge -->
-            <rect x="117" y="258" width="226" height="14" fill="url(#waterGrad)"/>
-            <line x1="117" y1="258" x2="222" y2="258" stroke="#64748b" stroke-width="2.5"/>
-            <line x1="238" y1="258" x2="343" y2="258" stroke="#64748b" stroke-width="2.5"/>
-            <line x1="117" y1="272" x2="343" y2="272" stroke="#64748b" stroke-width="2.5"/>
+            <rect x="127" y="263" width="226" height="14" fill="url(#waterGrad)"/>
+            <line x1="127" y1="263" x2="232" y2="263" stroke="#64748b" stroke-width="2.5"/>
+            <line x1="248" y1="263" x2="353" y2="263" stroke="#64748b" stroke-width="2.5"/>
+            <line x1="127" y1="277" x2="353" y2="277" stroke="#64748b" stroke-width="2.5"/>
 
             <!-- Central Reservoir Tube & Bulb -->
-            <rect x="222" y="125" width="16" height="135" fill="url(#waterGrad)"/>
-            <line x1="222" y1="125" x2="222" y2="258" stroke="#64748b" stroke-width="2.5"/>
-            <line x1="238" y1="125" x2="238" y2="258" stroke="#64748b" stroke-width="2.5"/>
-            <circle cx="230" cy="96" r="32" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
-            <!-- Reservoir Water Fill -->
+            <rect x="232" y="130" width="16" height="135" fill="url(#waterGrad)"/>
+            <line x1="232" y1="130" x2="232" y2="263" stroke="#64748b" stroke-width="2.5"/>
+            <line x1="248" y1="130" x2="248" y2="263" stroke="#64748b" stroke-width="2.5"/>
+            <circle cx="240" cy="101" r="32" fill="#fff" stroke="#64748b" stroke-width="2.5"/>
             <clipPath id="bulbClip">
-              <circle cx="230" cy="96" r="30.5"/>
+              <circle cx="240" cy="101" r="30.5"/>
             </clipPath>
-            <rect id="waterBulb" x="195" y="96" width="70" height="40" fill="url(#waterGrad)" clip-path="url(#bulbClip)"/>
+            <rect id="waterBulb" x="205" y="101" width="70" height="40" fill="url(#waterGrad)" clip-path="url(#bulbClip)"/>
             <!-- Top opening of reservoir -->
-            <rect x="223" y="56" width="14" height="10" fill="#f8fafc"/>
-            <line x1="223" y1="56" x2="223" y2="66" stroke="#64748b" stroke-width="2.5"/>
-            <line x1="237" y1="56" x2="237" y2="66" stroke="#64748b" stroke-width="2.5"/>
+            <rect x="233" y="61" width="14" height="10" fill="#f8fafc"/>
+            <line x1="233" y1="61" x2="233" y2="71" stroke="#64748b" stroke-width="2.5"/>
+            <line x1="247" y1="61" x2="247" y2="71" stroke="#64748b" stroke-width="2.5"/>
 
             <!-- Scale Ticks Left -->
             <g stroke="#475569" stroke-width="1.2" font-size="10" fill="#475569">
-              <line x1="85" y1="65" x2="93" y2="65"/><text x="64" y="69">0</text>
-              <line x1="85" y1="92" x2="91" y2="92"/>
-              <line x1="85" y1="120" x2="95" y2="120"/><text x="53" y="124">15 mL</text>
-              <line x1="85" y1="147" x2="91" y2="147"/>
-              <line x1="85" y1="175" x2="95" y2="175"/><text x="53" y="179">30 mL</text>
+              <line x1="95" y1="70" x2="103" y2="70"/><text x="74" y="74">0</text>
+              <line x1="95" y1="97" x2="101" y2="97"/>
+              <line x1="95" y1="125" x2="105" y2="125"/><text x="61" y="129">15 mL</text>
+              <line x1="95" y1="152" x2="101" y2="152"/>
+              <line x1="95" y1="180" x2="105" y2="180"/><text x="61" y="184">30 mL</text>
             </g>
 
             <!-- Scale Ticks Right -->
             <g stroke="#475569" stroke-width="1.2" font-size="10" fill="#475569">
-              <line x1="367" y1="65" x2="375" y2="65"/><text x="380" y="69">0</text>
-              <line x1="369" y1="92" x2="375" y2="92"/>
-              <line x1="365" y1="120" x2="375" y2="120"/><text x="380" y="124">15 mL</text>
-              <line x1="369" y1="147" x2="375" y2="147"/>
-              <line x1="365" y1="175" x2="375" y2="175"/><text x="380" y="179">30 mL</text>
+              <line x1="377" y1="70" x2="385" y2="70"/><text x="390" y="74">0</text>
+              <line x1="379" y1="97" x2="385" y2="97"/>
+              <line x1="375" y1="125" x2="385" y2="125"/><text x="390" y="129">15 mL</text>
+              <line x1="379" y1="152" x2="385" y2="152"/>
+              <line x1="375" y1="180" x2="385" y2="180"/><text x="390" y="184">30 mL</text>
             </g>
 
             <!-- Valves (Hähne) at top -->
-            <rect x="97" y="40" width="8" height="15" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
-            <line id="valveLeft" x1="88" y1="47" x2="114" y2="47" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+            <rect x="107" y="45" width="8" height="15" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+            <line id="valveLeft" x1="98" y1="52" x2="124" y2="52" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
 
-            <rect x="355" y="40" width="8" height="15" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
-            <line id="valveRight" x1="346" y1="47" x2="372" y2="47" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+            <rect x="365" y="45" width="8" height="15" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+            <line id="valveRight" x1="356" y1="52" x2="382" y2="52" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
 
             <!-- Platinum Electrodes -->
-            <rect x="97" y="232" width="8" height="24" fill="#334155" rx="1"/>
-            <rect x="355" y="232" width="8" height="24" fill="#334155" rx="1"/>
+            <rect x="107" y="237" width="8" height="24" fill="#334155" rx="1"/>
+            <rect x="365" y="237" width="8" height="24" fill="#334155" rx="1"/>
 
             <!-- Wires & Power Supply -->
-            <polyline points="101,256 101,322 195,322" fill="none" stroke="#dc2626" stroke-width="3"/>
-            <polyline points="359,256 359,322 265,322" fill="none" stroke="#1e293b" stroke-width="3"/>
-            <rect x="195" y="302" width="70" height="38" rx="7" fill="#1e293b"/>
-            <text x="230" y="325" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Stromquelle</text>
-            <circle cx="182" cy="310" r="10" fill="#dc2626"/>
-            <text x="182" y="314" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">+</text>
-            <circle cx="278" cy="310" r="10" fill="#334155"/>
-            <text x="278" y="314" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">–</text>
+            <polyline points="111,261 111,332 205,332" fill="none" stroke="#dc2626" stroke-width="3"/>
+            <polyline points="369,261 369,332 275,332" fill="none" stroke="#1e293b" stroke-width="3"/>
+            <rect x="205" y="312" width="70" height="38" rx="7" fill="#1e293b"/>
+            <text x="240" y="335" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Stromquelle</text>
+            <circle cx="192" cy="320" r="10" fill="#dc2626"/>
+            <text x="192" y="324" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">+</text>
+            <circle cx="288" cy="320" r="10" fill="#334155"/>
+            <text x="288" y="324" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">–</text>
 
             <!-- Dynamic Gas Volume Readout -->
-            <text id="volTextLeft" x="101" y="30" fill="#0f4c81" font-size="12" font-weight="bold" text-anchor="middle">0 mL</text>
-            <text id="volTextRight" x="359" y="30" fill="#0f4c81" font-size="12" font-weight="bold" text-anchor="middle">0 mL</text>
+            <text id="volTextLeft" x="111" y="34" fill="#0f4c81" font-size="12" font-weight="bold" text-anchor="middle">0 mL</text>
+            <text id="volTextRight" x="369" y="34" fill="#0f4c81" font-size="12" font-weight="bold" text-anchor="middle">0 mL</text>
 
             <!-- Bubbles Container -->
             <g id="bubblesLayer"></g>
 
             <!-- Gas Test Animation Overlay -->
             <g id="testAnimLayer"></g>
+
+            <!-- ==================== CIRCLED NUMBERS 1 TO 8 IN SKETCH ==================== -->
+            <!-- 1: Pluspol -->
+            <line x1="166" y1="346" x2="184" y2="328" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="158" cy="352" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="158" y="356" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+
+            <!-- 2: Minuspol -->
+            <line x1="314" y1="346" x2="296" y2="328" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="322" cy="352" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="322" y="356" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+
+            <!-- 3: Gas & Volumen links (15 mL O2) -->
+            <line x1="46" y1="100" x2="95" y2="100" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="35" cy="100" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="35" y="104" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+
+            <!-- 4: Gas & Volumen rechts (30 mL H2) -->
+            <line x1="434" y1="115" x2="385" y2="115" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="445" cy="115" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="445" y="119" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">4</text>
+
+            <!-- 5: Gasnachweis links (Glimmspanprobe) -->
+            <line x1="46" y1="44" x2="96" y2="50" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="35" cy="42" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="35" y="46" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">5</text>
+
+            <!-- 6: Gasnachweis rechts (Knallgasprobe) -->
+            <line x1="434" y1="44" x2="384" y2="50" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="445" cy="42" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="445" y="46" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">6</text>
+
+            <!-- 7: Reservoir mit Wasser -->
+            <line x1="240" y1="42" x2="240" y2="69" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="240" cy="31" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="240" y="35" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">7</text>
+
+            <!-- 8: Platin-Elektrode -->
+            <line x1="158" y1="249" x2="116" y2="249" stroke="#0f4c81" stroke-width="1.5"/>
+            <circle cx="169" cy="249" r="11" fill="#0f4c81" stroke="#fff" stroke-width="1.5"/>
+            <text x="169" y="253" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">8</text>
           </svg>
         </div>
 
-        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:8px;">
+        <div class="no-heft" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:8px;">
           <button class="btn btn-primary" id="btnTogglePower" onclick="toggleElectrolysis()">⚡ Stromquelle EIN</button>
           <button class="btn btn-outline" onclick="resetElectrolysis()">↺ Zurücksetzen</button>
         </div>
-        <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:8px;">
+        <div class="no-heft" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:8px;">
           <button class="btn btn-warning btn-sm" id="btnTestO2" onclick="runGasTest('o2')" disabled>🔥 Glimmspanprobe (Links +)</button>
           <button class="btn btn-warning btn-sm" id="btnTestH2" onclick="runGasTest('h2')" disabled>💥 Knallgasprobe (Rechts –)</button>
         </div>
         <div class="feedback info" id="simFeedback"></div>
       </div>
 
-      <!-- Right: Labeling the Apparatus (Task 1 Diagram) -->
+      <!-- Right: Labeling the Apparatus with matching Circled Numbers 1-8 -->
       <div class="card">
         <div class="card-header">
-          <h2 class="card-title">🏷️ Aufgabe 1a: Versuchsaufbau beschriften</h2>
-          <span class="pill-tag" id="status-st1-t1">Offen</span>
+          <h2 class="card-title">🏷️ Beschriftung des Versuchsaufbaus</h2>
+          <span class="pill-tag no-heft" id="status-st1-t1">Offen</span>
         </div>
-        <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
-          Tippe zuerst einen <strong>Begriff</strong> an und tippe dann auf das passende <strong>Zielfeld</strong> im Versuchsaufbau.
+        <p class="no-heft" style="font-size:0.87rem; color:var(--text-muted); margin-top:0;">
+          Tippe zuerst einen <strong>Begriff</strong> an und tippe dann auf das zugehörige <strong>Zielfeld (①–⑧)</strong>. Die eingekreisten Zahlen entsprechen den Positionen in der Skizze links.
         </p>
 
         <div class="chip-pool" id="pool-apparatus">
@@ -889,46 +1052,54 @@
           <div class="chip" data-val="Reservoir mit Wasser">Reservoir mit Wasser</div>
         </div>
 
-        <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:14px;">
+        <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:13px;">
           <div class="grid-2" style="gap:12px;">
             <div style="border-right:1px dashed #cbd5e1; padding-right:10px;">
               <div style="font-weight:700; color:#dc2626; margin-bottom:8px;">Linker Schenkel (+)</div>
-              <div style="margin-bottom:8px; font-size:0.86rem;">Pol der Stromquelle:<br>
+              <div style="margin-bottom:8px; font-size:0.85rem;">
+                <span class="num-badge">1</span>Pol der Stromquelle:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="Pluspol">Hier tippen</span>
               </div>
-              <div style="margin-bottom:8px; font-size:0.86rem;">Gebildetes Gas &amp; Volumen:<br>
+              <div style="margin-bottom:8px; font-size:0.85rem;">
+                <span class="num-badge">3</span>Gebildetes Gas &amp; Volumen:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="15 mL Sauerstoff">Hier tippen</span>
               </div>
-              <div style="font-size:0.86rem;">Positiver Gasnachweis:<br>
+              <div style="font-size:0.85rem;">
+                <span class="num-badge">5</span>Positiver Gasnachweis:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="Glimmspanprobe">Hier tippen</span>
               </div>
             </div>
 
             <div>
               <div style="font-weight:700; color:#0f4c81; margin-bottom:8px;">Rechter Schenkel (–)</div>
-              <div style="margin-bottom:8px; font-size:0.86rem;">Pol der Stromquelle:<br>
+              <div style="margin-bottom:8px; font-size:0.85rem;">
+                <span class="num-badge">2</span>Pol der Stromquelle:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="Minuspol">Hier tippen</span>
               </div>
-              <div style="margin-bottom:8px; font-size:0.86rem;">Gebildetes Gas &amp; Volumen:<br>
+              <div style="margin-bottom:8px; font-size:0.85rem;">
+                <span class="num-badge">4</span>Gebildetes Gas &amp; Volumen:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="30 mL Wasserstoff">Hier tippen</span>
               </div>
-              <div style="font-size:0.86rem;">Positiver Gasnachweis:<br>
+              <div style="font-size:0.85rem;">
+                <span class="num-badge">6</span>Positiver Gasnachweis:<br>
                 <span class="drop-slot" data-group="apparatus" data-ans="Knallgasprobe">Hier tippen</span>
               </div>
             </div>
           </div>
 
-          <div style="border-top:1px dashed #cbd5e1; margin-top:12px; padding-top:10px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:10px;">
-            <div style="font-size:0.86rem;">Mittlere Glaskugel:<br>
+          <div style="border-top:1px dashed #cbd5e1; margin-top:11px; padding-top:10px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:10px;">
+            <div style="font-size:0.85rem;">
+              <span class="num-badge">7</span>Mittlere Glaskugel:<br>
               <span class="drop-slot" data-group="apparatus" data-ans="Reservoir mit Wasser">Hier tippen</span>
             </div>
-            <div style="font-size:0.86rem;">Metallplättchen im Wasser:<br>
+            <div style="font-size:0.85rem;">
+              <span class="num-badge">8</span>Metallplättchen im Wasser:<br>
               <span class="drop-slot" data-group="apparatus" data-ans="Platin-Elektrode">Hier tippen</span>
             </div>
           </div>
         </div>
 
-        <div style="margin-top:12px; display:flex; gap:8px;">
+        <div class="no-heft" style="margin-top:12px; display:flex; gap:8px;">
           <button class="btn btn-primary btn-sm" onclick="checkApparatusLabels()">✓ Beschriftung prüfen</button>
           <button class="btn btn-outline btn-sm" onclick="resetGroup('apparatus')">Zurücksetzen</button>
         </div>
@@ -936,14 +1107,14 @@
       </div>
     </div>
 
-    <!-- Protocol Cloze & Reaction Schema (Task 1 Text) -->
+    <!-- Protocol Cloze & Reaction Schema -->
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">📝 Aufgabe 1b: Versuchsprotokoll &amp; Erklärung auf Stoffebene</h2>
-        <span class="pill-tag" id="status-st1-t2">Offen</span>
+        <h2 class="card-title">📝 Versuchsprotokoll &amp; Erklärung auf Stoffebene</h2>
+        <span class="pill-tag no-heft" id="status-st1-t2">Offen</span>
       </div>
 
-      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:16px; font-size:0.95rem; line-height:1.9;">
+      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:15px; font-size:0.94rem; line-height:1.85;">
         <p style="margin-top:0;"><strong>Versuchsdurchführung:</strong> Der Hofmannsche Wasserzersetzungsapparat wird mit
           <select class="cloze-select" data-group="proto" data-ans="Wasser">
             <option value="">– auswählen –</option>
@@ -974,7 +1145,7 @@
             <option value="Sauerstoff">Sauerstoff</option>
             <option value="Wasserstoff">Wasserstoff</option>
             <option value="Stickstoff">Stickstoff</option>
-          </select>).
+          </select>). Das Volumenverhältnis von Wasserstoff zu Sauerstoff beträgt <strong>2 : 1</strong>.
         </p>
 
         <p style="margin-bottom:0;"><strong>Erklärung (auf Stoffebene):</strong> Wasser ist eine chemische
@@ -1008,9 +1179,9 @@
       </div>
 
       <!-- Word Equation & Definitions -->
-      <div class="grid-2" style="margin-top:16px;">
-        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:14px;">
-          <div style="font-weight:700; color:#0f4c81; margin-bottom:8px;">Reaktionsschema vervollständigen:</div>
+      <div class="grid-2" style="margin-top:14px;">
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px; padding:13px;">
+          <div style="font-weight:700; color:#0f4c81; margin-bottom:6px;">Reaktionsschema:</div>
           <div style="display:flex; align-items:center; flex-wrap:wrap; gap:6px; font-weight:700;">
             <select class="cloze-select" data-group="proto" data-ans="Wasser (l)">
               <option value="">Edukt?</option>
@@ -1031,13 +1202,13 @@
               <option value="Sauerstoff (g)">Sauerstoff (g)</option>
             </select>
           </div>
-          <div style="font-size:0.8rem; color:var(--text-muted); margin-top:6px;">
-            Hinweis: (l) = liquid (flüssig), (g) = gaseous (gasförmig)
+          <div style="font-size:0.79rem; color:var(--text-muted); margin-top:5px;">
+            (l) = liquid (flüssig), (g) = gaseous (gasförmig)
           </div>
         </div>
 
-        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:14px;">
-          <div style="font-weight:700; color:#15803d; margin-bottom:8px;">Fachbegriffe definieren:</div>
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:13px;">
+          <div style="font-weight:700; color:#15803d; margin-bottom:6px;">Definitionen:</div>
           <div style="font-size:0.88rem; margin-bottom:6px;">
             <strong>Verbindung:</strong> Reinstoff, der durch eine chemische Reaktion in andere Reinstoffe
             <select class="cloze-select" data-group="proto" data-ans="zerlegt werden kann">
@@ -1057,14 +1228,14 @@
         </div>
       </div>
 
-      <div style="margin-top:12px;">
+      <div class="no-heft" style="margin-top:12px;">
         <button class="btn btn-primary btn-sm" onclick="checkProtocol()">✓ Protokoll &amp; Reaktionsschema prüfen</button>
       </div>
       <div class="feedback" id="fb-proto"></div>
     </div>
 
-    <!-- Lernzielkontrolle 1 -->
-    <div class="card">
+    <!-- Lernzielkontrolle 1 (hidden in Hefteintrag) -->
+    <div class="card lzk-card">
       <div class="card-header">
         <h2 class="card-title">🎯 Lernzielkontrolle 1: Trennung oder chemische Reaktion?</h2>
         <span class="pill-tag quiz" id="status-st1-q1">Checkpoint</span>
@@ -1080,58 +1251,48 @@
           B) Weil Wasser ein Reinstoff mit konstanten Eigenschaften ist und durch ständige Zufuhr elektrischer Energie zwei völlig neue Reinstoffe (Wasserstoff und Sauerstoff) mit ganz anderen Eigenschaften entstehen.
         </button>
         <button class="quiz-option" onclick="selectQuiz('lzk1', 2, false)">
-          C) Weil Sauerstoff und Wasserstoff schon vorher als kleine Gasbläschen im Wasser geschwommen sind und nur nach oben gestiegen ist.
+          C) Weil Sauerstoff und Wasserstoff schon vorher als kleine Gasbläschen im Wasser geschwommen sind und nur nach oben gestiegen sind.
         </button>
       </div>
       <div class="feedback" id="fb-lzk1"></div>
     </div>
 
+    <!-- Hefteintrag Unlock Bar for Lesson 1 -->
+    <div class="heft-unlock-box">
+      <div>
+        <strong style="color:var(--primary-dark);">📓 Hefteintrag zu „1. Experiment“</strong>
+        <div id="heftStatus-st1" style="font-size:0.84rem; color:var(--text-muted);">Löse alle Aufgaben in Lektion 1, um den fertigen Hefteintrag zum Abspeichern zu öffnen.</div>
+      </div>
+      <button class="btn btn-primary" id="btnHeft-st1" onclick="enterHeftMode('st1', '1. Experiment – Die Wasser-Elektrolyse')" disabled>
+        📸 Hefteintrag anzeigen
+      </button>
+    </div>
+
     <div class="station-footer">
       <span></span>
-      <button class="btn btn-primary" onclick="switchStation('st2')">Weiter zu Station 2: Stoffeinteilung ➔</button>
+      <button class="btn btn-primary" onclick="switchStation('st2')">Weiter zu 2. Stoffeinteilung ➔</button>
     </div>
   </section>
 
-  <!-- ==================== STATION 2 ==================== -->
+  <!-- ==================== 2. STOFFEINTEILUNG ==================== -->
   <section class="station" id="st2">
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">🗂️ Aufgabe 2: Stoffeinteilung – Stoffgemische &amp; Reinstoffe</h2>
-        <span class="pill-tag" id="status-st2-all">Offen</span>
+        <h2 class="card-title">🗂️ Einteilung der Stoffe</h2>
+        <span class="pill-tag no-heft" id="status-st2-all">Offen</span>
       </div>
-      <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0;">
-        <strong>Schritt 1:</strong> Ergänze die beiden Übergangspfeile im Schema.<br>
-        <strong>Schritt 2:</strong> Tippe jeweils ein <strong>Stoffbeispiel</strong> an und ordne es per Tipp in eine der vier unteren Kategorien ein!
+      <p class="no-heft" style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
+        <strong>1.</strong> Ordne die beiden <strong>Übergangspfeile</strong> den gestrichelten Linien im Baumdiagramm zu.<br>
+        <strong>2.</strong> Tippe jeweils ein <strong>Stoffbeispiel</strong> an und ordne es direkt in das passende Feld (<em>z. B.</em>) im Baumdiagramm ein!
       </p>
 
-      <!-- Step 1: Arrows -->
+      <!-- Transition Arrows Pool -->
       <div class="chip-pool" id="pool-arrows">
         <div class="chip" data-val="Physikalische Trennverfahren">Physikalische Trennverfahren</div>
         <div class="chip" data-val="Chemische Reaktionen">Chemische Reaktionen</div>
       </div>
 
-      <div class="tree-wrapper">
-        <div class="tree-node" style="background:#0f4c81; color:#fff;">Stoffe</div>
-        <div class="tree-row">
-          <div class="tree-node">Stoffgemische</div>
-          <div style="display:flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--text-muted);">
-            <span>───</span>
-            <span class="drop-slot" data-group="arrows" data-ans="Physikalische Trennverfahren">Übergang 1</span>
-            <span>──▶</span>
-          </div>
-          <div class="tree-node">Reinstoffe</div>
-        </div>
-      </div>
-
-      <div style="margin: 10px 0 14px 0; text-align:center;">
-        <button class="btn btn-primary btn-sm" onclick="checkArrows()">✓ Übergänge prüfen</button>
-      </div>
-      <div class="feedback" id="fb-arrows" style="margin-bottom:14px;"></div>
-
-      <hr style="border:0; border-top:1px solid #e2e8f0; margin:16px 0;">
-
-      <!-- Step 2: Substance Examples Pool -->
-      <div style="font-weight:700; font-size:0.9rem; margin-bottom:6px;">Stoffbeispiele zum Zuordnen (tippe erst den Stoff, dann die passende Box):</div>
+      <!-- Substance Examples Pool -->
       <div class="chip-pool" id="pool-substances">
         <div class="chip" data-sub="Wasser" data-cat="Verbindungen">Wasser</div>
         <div class="chip" data-sub="Eisen-Schwefel-Gemenge" data-cat="Heterogen">Eisen-Schwefel-Gemenge</div>
@@ -1145,62 +1306,119 @@
         <div class="chip" data-sub="Eisenoxid" data-cat="Verbindungen">Eisenoxid</div>
       </div>
 
-      <div style="text-align:center; margin-bottom:10px; font-size:0.85rem; color:var(--text-muted);">
-        Verbindungen ◀── <span style="font-weight:700; color:var(--primary);">Chemische Reaktionen</span> ──▶ Elemente
+      <!-- EXACT TREE DIAGRAM FROM WORKSHEET -->
+      <div class="tree-diagram">
+        <!-- Level 1: Stoffe -->
+        <div class="tree-root">Stoffe</div>
+        <div class="tree-stem-v"></div>
+        <div class="tree-branch-bar"></div>
+
+        <!-- Level 2: Stoffgemische <--- Physikalische Trennverfahren ---> Reinstoffe -->
+        <div class="tree-level-2">
+          <div class="tree-mid-col">
+            <div class="tree-stem-v" style="height:12px;"></div>
+            <div class="tree-box-mid">Stoffgemische</div>
+            <div class="tree-stem-v" style="height:14px;"></div>
+            <div class="tree-sub-split"></div>
+          </div>
+
+          <div class="tree-transition">
+            <span>┄┄</span>
+            <span class="drop-slot" data-group="arrows" data-ans="Physikalische Trennverfahren">Übergang 1</span>
+            <span>┄▶</span>
+          </div>
+
+          <div class="tree-mid-col">
+            <div class="tree-stem-v" style="height:12px;"></div>
+            <div class="tree-box-mid">Reinstoffe</div>
+            <div class="tree-stem-v" style="height:14px;"></div>
+            <div class="tree-sub-split"></div>
+          </div>
+        </div>
+
+        <!-- Level 3: 4 Leaf Boxes with Chemische Reaktionen between Verbindungen & Elemente -->
+        <div class="tree-level-3-wrapper">
+          <!-- Left Pair: Heterogene & Homogene Stoffgemische -->
+          <div class="tree-pair">
+            <div class="tree-leaf" onclick="placeSubstance('Heterogen')">
+              <div class="tree-leaf-title" style="color:#b45309;">Heterogene Stoffgemische</div>
+              <div class="tree-leaf-zb">z. B.</div>
+              <div class="bucket-items" id="bucket-Heterogen"></div>
+            </div>
+            <div class="tree-leaf" onclick="placeSubstance('Homogen')">
+              <div class="tree-leaf-title" style="color:#0369a1;">Homogene Stoffgemische</div>
+              <div class="tree-leaf-zb">z. B.</div>
+              <div class="bucket-items" id="bucket-Homogen"></div>
+            </div>
+          </div>
+
+          <!-- Center spacer -->
+          <div style="width:10px;"></div>
+
+          <!-- Right Pair: Verbindungen <--- Chemische Reaktionen ---> Elemente -->
+          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:8px; align-items:stretch;">
+            <div class="tree-leaf" onclick="placeSubstance('Verbindungen')">
+              <div class="tree-leaf-title" style="color:#15803d;">Verbindungen</div>
+              <div class="tree-leaf-zb">z. B.</div>
+              <div class="bucket-items" id="bucket-Verbindungen"></div>
+            </div>
+
+            <div class="tree-transition" style="flex-direction:column; gap:2px;">
+              <span style="font-size:0.78rem;">◀┄┄▶</span>
+              <span class="drop-slot" style="min-width:115px; font-size:0.78rem; padding:4px 6px;" data-group="arrows" data-ans="Chemische Reaktionen">Übergang 2</span>
+            </div>
+
+            <div class="tree-leaf" onclick="placeSubstance('Elemente')">
+              <div class="tree-leaf-title" style="color:#1d4ed8;">Elemente</div>
+              <div class="tree-leaf-zb">z. B.</div>
+              <div class="bucket-items" id="bucket-Elemente"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="bucket-grid">
-        <div class="bucket" onclick="placeSubstance('Heterogen')">
-          <h4 style="color:#b45309;">Heterogene Stoffgemische</h4>
-          <div class="bucket-items" id="bucket-Heterogen"></div>
-        </div>
-        <div class="bucket" onclick="placeSubstance('Homogen')">
-          <h4 style="color:#0369a1;">Homogene Stoffgemische</h4>
-          <div class="bucket-items" id="bucket-Homogen"></div>
-        </div>
-        <div class="bucket" onclick="placeSubstance('Verbindungen')">
-          <h4 style="color:#15803d;">Verbindungen</h4>
-          <div class="bucket-items" id="bucket-Verbindungen"></div>
-        </div>
-        <div class="bucket" onclick="placeSubstance('Elemente')">
-          <h4 style="color:#1d4ed8;">Elemente</h4>
-          <div class="bucket-items" id="bucket-Elemente"></div>
-        </div>
+      <div class="no-heft" style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="btn btn-primary btn-sm" onclick="checkStation2All()">✓ Baumdiagramm &amp; Zuordnung prüfen</button>
+        <button class="btn btn-outline btn-sm" onclick="resetStation2()">Zurücksetzen</button>
       </div>
+      <div class="feedback" id="fb-st2"></div>
+    </div>
 
-      <div style="margin-top:12px; display:flex; gap:8px;">
-        <button class="btn btn-primary btn-sm" onclick="checkSubstances()">✓ Zuordnung prüfen</button>
-        <button class="btn btn-outline btn-sm" onclick="resetSubstances()">Zurücksetzen</button>
+    <!-- Hefteintrag Unlock Bar for Lesson 2 -->
+    <div class="heft-unlock-box">
+      <div>
+        <strong style="color:var(--primary-dark);">📓 Hefteintrag zu „2. Stoffeinteilung“</strong>
+        <div id="heftStatus-st2" style="font-size:0.84rem; color:var(--text-muted);">Vervollständige das Baumdiagramm, um den fertigen Hefteintrag zu öffnen.</div>
       </div>
-      <div class="feedback" id="fb-substances"></div>
+      <button class="btn btn-primary" id="btnHeft-st2" onclick="enterHeftMode('st2', '2. Stoffeinteilung – Stoffgemische und Reinstoffe')" disabled>
+        📸 Hefteintrag anzeigen
+      </button>
     </div>
 
     <div class="station-footer">
-      <button class="btn btn-outline" onclick="switchStation('st1')">⬅ Zurück zu Station 1</button>
-      <button class="btn btn-primary" onclick="switchStation('st3')">Weiter zu Station 3: Dalton-Atommodell ➔</button>
+      <button class="btn btn-outline" onclick="switchStation('st1')">⬅ Zurück zu 1. Experiment</button>
+      <button class="btn btn-primary" onclick="switchStation('st3')">Weiter zu 3. Dalton-Atommodell ➔</button>
     </div>
   </section>
 
-  <!-- ==================== STATION 3 ==================== -->
+  <!-- ==================== 3. DALTON-ATOMMODELL ==================== -->
   <section class="station" id="st3">
-    <!-- 3A: Limits of Simple Particle Model -->
-    <div class="card">
+    <!-- 3A: Model Critique (Lernzielkontrolle / Diskussionsfrage -> hidden in Hefteintrag) -->
+    <div class="card lzk-card">
       <div class="card-header">
-        <h2 class="card-title">🤔 Aufgabe 3: Warum reicht das einfache Teilchenmodell nicht aus?</h2>
-        <span class="pill-tag">Modellkritik</span>
+        <h2 class="card-title">🤔 Lernzielkontrolle: Warum reicht das einfache Teilchenmodell nicht aus?</h2>
+        <span class="pill-tag quiz" id="status-st3-dem">Checkpoint</span>
       </div>
       <div class="grid-2" style="align-items:center;">
         <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:14px; text-align:center;">
-          <div style="font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:8px;">Einfaches Teilchenmodell (nach Demokrit, ~400 v. Chr.)</div>
+          <div style="font-size:0.84rem; font-weight:700; color:var(--text-muted); margin-bottom:8px;">Einfaches Teilchenmodell (nach Demokrit, ~400 v. Chr.)</div>
           <svg viewBox="0 0 360 110" style="width:100%; max-width:340px; height:auto;">
-            <!-- 2 blue triangles -->
             <polygon points="35,25 15,65 55,65" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
             <polygon points="85,35 65,75 105,75" fill="#93c5fd" stroke="#1d4ed8" stroke-width="2"/>
             <text x="60" y="96" font-size="11" text-anchor="middle" fill="#1e293b">Wasser-Teilchen</text>
 
             <text x="145" y="58" font-size="22" font-weight="bold" fill="#dc2626" text-anchor="middle">⟶ ?</text>
 
-            <!-- Grey and red ovals -->
             <ellipse cx="205" cy="42" rx="18" ry="10" transform="rotate(-25 205 42)" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
             <ellipse cx="235" cy="64" rx="18" ry="10" transform="rotate(-25 235 64)" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
             <text x="220" y="96" font-size="11" text-anchor="middle" fill="#1e293b">Wasserstoff</text>
@@ -1213,15 +1431,24 @@
         </div>
 
         <div>
-          <p style="font-size:0.9rem; margin-top:0;">
+          <p style="font-size:0.89rem; margin-top:0;">
             Im einfachen Teilchenmodell besteht jeder Reinstoff aus unveränderlichen kleinsten Teilchen (z. B. blauen Dreiecken für Wasser). Warum scheitert dieses Modell bei der Wasser-Elektrolyse?
           </p>
           <div id="quiz-demokrit">
-            <button class="quiz-option" onclick="selectQuiz('demokrit', 0, true)">
-              ✓ Im einfachen Teilchenmodell sind Teilchen unveränderlich. Das Verschwinden der Wasser-Teilchen und das Neuentstehen völlig anderer Teilchen (Wasserstoff &amp; Sauerstoff) lässt sich damit nicht erklären!
+            <button class="quiz-option" onclick="selectQuiz('demokrit', 0, false)">
+              A) Weil das einfache Teilchenmodell nur für feste Stoffe gilt und flüssiges Wasser sowie Gase damit nicht dargestellt werden können.
             </button>
-            <button class="quiz-option" onclick="selectQuiz('demokrit', 1, false)">
-              ✗ Weil blaue Dreiecke in Wirklichkeit keine Ecken haben dürfen.
+            <button class="quiz-option" onclick="selectQuiz('demokrit', 1, true)">
+              B) Weil Teilchen im einfachen Teilchenmodell unveränderlich sind – das Verschwinden der Wasser-Teilchen und das Neuentstehen völlig neuer Teilchen (Wasserstoff &amp; Sauerstoff) lässt sich damit nicht erklären.
+            </button>
+            <button class="quiz-option" onclick="selectQuiz('demokrit', 2, false)">
+              C) Weil im einfachen Teilchenmodell zwischen den Teilchen kein leerer Raum vorgesehen ist und sich die Teilchen deshalb nicht bewegen können.
+            </button>
+            <button class="quiz-option" onclick="selectQuiz('demokrit', 3, false)">
+              D) Weil man mit dem einfachen Teilchenmodell nicht erklären kann, warum Wasser beim Erhitzen verdampft.
+            </button>
+            <button class="quiz-option" onclick="selectQuiz('demokrit', 4, false)">
+              E) Weil laut dem einfachen Teilchenmodell alle Stoffe aus identischen Kugeln bestehen, die sich nur in ihrer Farbe unterscheiden.
             </button>
           </div>
           <div class="feedback" id="fb-demokrit"></div>
@@ -1229,25 +1456,25 @@
       </div>
     </div>
 
-    <!-- 3B: Dalton Animation & Diagram Labeling (Task 4) -->
+    <!-- 3B: Dalton Animation (no-heft) & Diagram Labeling with Connector Lines (kept in Hefteintrag!) -->
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">⚛️ Aufgabe 4: Atommodell nach Dalton – Animation &amp; Beschriftung</h2>
-        <span class="pill-tag" id="status-st3-t1">Offen</span>
+        <h2 class="card-title">⚛️ Das Atommodell nach Dalton</h2>
+        <span class="pill-tag no-heft" id="status-st3-t1">Offen</span>
       </div>
 
-      <!-- Interactive Step Animation -->
-      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:14px; margin-bottom:16px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
-          <strong style="color:var(--primary-dark);">Interaktive Animation: Was passiert bei der Elektrolyse auf Teilchenebene?</strong>
+      <!-- Interactive Step Animation (hidden in Hefteintrag) -->
+      <div class="no-heft" style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:13px; margin-bottom:15px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:9px;">
+          <strong style="color:var(--primary-dark); font-size:0.92rem;">Interaktive Animation: Umgruppierung der Atome bei der Elektrolyse</strong>
           <div style="display:flex; gap:6px; flex-wrap:wrap;">
-            <button class="btn btn-outline btn-sm" id="daltonStep1" onclick="setDaltonStep(1)">1. Ausgangsstoffe (Edukte)</button>
-            <button class="btn btn-warning btn-sm" id="daltonStep2" onclick="setDaltonStep(2)">2. Energiezufuhr (Spaltung)</button>
-            <button class="btn btn-success btn-sm" id="daltonStep3" onclick="setDaltonStep(3)">3. Umgruppierung (Produkte)</button>
+            <button class="btn btn-outline btn-sm" onclick="setDaltonStep(1)">1. Ausgangsstoffe</button>
+            <button class="btn btn-warning btn-sm" onclick="setDaltonStep(2)">2. Energiezufuhr (Spaltung)</button>
+            <button class="btn btn-success btn-sm" onclick="setDaltonStep(3)">3. Umgruppierung (Produkte)</button>
           </div>
         </div>
 
-        <svg id="daltonAnimSvg" viewBox="0 0 680 175" style="width:100%; max-height:185px; background:#fff; border-radius:10px; border:1px solid #e2e8f0;">
+        <svg id="daltonAnimSvg" viewBox="0 0 680 165" style="width:100%; max-height:175px; background:#fff; border-radius:10px; border:1px solid #e2e8f0;">
           <defs>
             <radialGradient id="redAtom" cx="35%" cy="35%" r="65%">
               <stop offset="0%" stop-color="#fca5a5"/>
@@ -1261,42 +1488,39 @@
             </radialGradient>
           </defs>
 
-          <!-- Caption banner inside SVG -->
-          <text id="daltonCaption" x="340" y="24" font-size="13" font-weight="bold" fill="#0f4c81" text-anchor="middle">
+          <text id="daltonCaption" x="340" y="22" font-size="13" font-weight="bold" fill="#0f4c81" text-anchor="middle">
             Schritt 1: Zwei Wasser-Moleküle (je 1 Sauerstoff-Atom + 2 Wasserstoff-Atome)
           </text>
 
-          <!-- Animated Atoms Group (2 Red O-Atoms, 4 White H-Atoms) -->
-          <g id="atom-O1" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(150, 95)">
-            <circle r="24" fill="url(#redAtom)" stroke="#7f1d1d" stroke-width="1.5"/>
+          <g id="atom-O1" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(150, 90)">
+            <circle r="23" fill="url(#redAtom)" stroke="#7f1d1d" stroke-width="1.5"/>
           </g>
-          <g id="atom-H1" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(122, 118)">
-            <circle r="13" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
+          <g id="atom-H1" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(122, 112)">
+            <circle r="12.5" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
           </g>
-          <g id="atom-H2" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(178, 118)">
-            <circle r="13" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
-          </g>
-
-          <g id="atom-O2" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(275, 95)">
-            <circle r="24" fill="url(#redAtom)" stroke="#7f1d1d" stroke-width="1.5"/>
-          </g>
-          <g id="atom-H3" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(247, 118)">
-            <circle r="13" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
-          </g>
-          <g id="atom-H4" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(303, 118)">
-            <circle r="13" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
+          <g id="atom-H2" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(178, 112)">
+            <circle r="12.5" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
           </g>
 
-          <!-- Atom Count Footer -->
-          <text id="daltonCounter" x="340" y="162" font-size="12" fill="#475569" text-anchor="middle">
+          <g id="atom-O2" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(275, 90)">
+            <circle r="23" fill="url(#redAtom)" stroke="#7f1d1d" stroke-width="1.5"/>
+          </g>
+          <g id="atom-H3" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(247, 112)">
+            <circle r="12.5" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
+          </g>
+          <g id="atom-H4" style="transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);" transform="translate(303, 112)">
+            <circle r="12.5" fill="url(#whiteAtom)" stroke="#475569" stroke-width="1.5"/>
+          </g>
+
+          <text x="340" y="152" font-size="11.5" fill="#475569" text-anchor="middle">
             Atom-Bilanz: 2 Sauerstoff-Atome (rot) + 4 Wasserstoff-Atome (weiß) = 6 Atome gesamt
           </text>
         </svg>
       </div>
 
-      <!-- Labeling Task (Task 4 from AB) -->
-      <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
-        <strong>Beschriftungs-Aufgabe:</strong> Ordne die fünf Fachbegriffe aus dem Arbeitsblatt den passenden Pfeilen im Dalton-Reaktionsschema zu!
+      <!-- Labeling Task with Direct Connector Lines (matching AB page 2!) -->
+      <p class="no-heft" style="font-size:0.87rem; color:var(--text-muted); margin-top:0;">
+        <strong>Beschriftung:</strong> Ordne die Fachbegriffe den fünf Kästchen zu. Achte genau darauf, worauf die <strong>Verbindungspfeile</strong> zeigen (einzelnes Atom vs. eingekreistes Molekül)!
       </p>
       <div class="chip-pool" id="pool-dalton">
         <div class="chip" data-val="Sauerstoff-Atom">Sauerstoff-Atom</div>
@@ -1304,83 +1528,98 @@
         <div class="chip" data-val="Wasser-Molekül">Wasser-Molekül</div>
         <div class="chip" data-val="Wasserstoff-Molekül">Wasserstoff-Molekül</div>
         <div class="chip" data-val="Sauerstoff-Molekül">Sauerstoff-Molekül</div>
+        <div class="chip" data-val="Wasser-Atom">Wasser-Atom</div>
       </div>
 
-      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:14px;">
-        <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
-          <div style="font-size:0.85rem;">Einzelne große rote Kugel:<br>
-            <span class="drop-slot" data-group="dalton" data-ans="Sauerstoff-Atom">Begriff wählen</span>
+      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:12px; overflow-x:auto;">
+        <div style="min-width:620px; max-width:740px; margin:0 auto;">
+          <!-- Top 2 Boxes (Atoms) -->
+          <div style="display:flex; justify-content:space-around; padding:0 60px;">
+            <span class="drop-slot" data-group="dalton" data-ans="Sauerstoff-Atom">Atom links/rechts</span>
+            <span class="drop-slot" data-group="dalton" data-ans="Wasserstoff-Atom">Atom unten</span>
           </div>
-          <div style="font-size:0.85rem;">Einzelne kleine weiße Kugel:<br>
-            <span class="drop-slot" data-group="dalton" data-ans="Wasserstoff-Atom">Begriff wählen</span>
-          </div>
-        </div>
 
-        <svg viewBox="0 0 640 120" style="width:100%; max-height:125px; display:block; margin:0 auto;">
-          <!-- 2 Water molecules -->
-          <g transform="translate(85,55)">
-            <ellipse cx="0" cy="4" rx="42" ry="30" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 3"/>
-            <circle cx="0" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
-            <circle cx="-20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-            <circle cx="20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-          </g>
-          <g transform="translate(175,55)">
-            <circle cx="0" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
-            <circle cx="-20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-            <circle cx="20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-          </g>
+          <!-- SVG with Connector Arrows matching AB Page 2 -->
+          <svg viewBox="0 0 680 155" style="width:100%; height:auto; display:block;">
+            <defs>
+              <marker id="arrowTip" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0,1 L7,4 L0,7 Z" fill="#0f4c81"/>
+              </marker>
+            </defs>
 
-          <text x="245" y="62" font-size="24" font-weight="bold" fill="#0f172a">⟶</text>
+            <!-- Connector lines from Top Left Box (Sauerstoff-Atom) to red O-atom & O2 -->
+            <line x1="210" y1="2" x2="182" y2="56" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
+            <line x1="230" y1="2" x2="532" y2="56" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
 
-          <!-- 2 Hydrogen molecules -->
-          <g transform="translate(310,55)">
-            <circle cx="-10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-            <circle cx="10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-          </g>
-          <g transform="translate(375,55)">
-            <ellipse cx="0" cy="0" rx="28" ry="18" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 3"/>
-            <circle cx="-10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-            <circle cx="10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
-          </g>
+            <!-- Connector lines from Top Right Box (Wasserstoff-Atom) to white H-atom & H2 -->
+            <line x1="450" y1="2" x2="202" y2="82" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
+            <line x1="465" y1="2" x2="382" y2="66" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
 
-          <text x="435" y="62" font-size="22" font-weight="bold" fill="#0f172a">+</text>
+            <!-- 2 Water molecules (left) -->
+            <g transform="translate(90,78)">
+              <ellipse cx="0" cy="4" rx="44" ry="31" fill="none" stroke="#0f172a" stroke-width="2"/>
+              <circle cx="0" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
+              <circle cx="-20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+              <circle cx="20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+            </g>
+            <g transform="translate(182,78)">
+              <circle cx="0" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
+              <circle cx="-20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+              <circle cx="20" cy="14" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+            </g>
 
-          <!-- 1 Oxygen molecule -->
-          <g transform="translate(525,55)">
-            <ellipse cx="0" cy="0" rx="44" ry="26" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 3"/>
-            <circle cx="-17" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
-            <circle cx="17" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
-          </g>
-        </svg>
+            <text x="255" y="85" font-size="26" font-weight="bold" fill="#0f172a">⟶</text>
 
-        <div class="grid-3" style="margin-top:6px;">
-          <div style="text-align:center; font-size:0.85rem;">Umkreistes Teilchen links:<br>
-            <span class="drop-slot" data-group="dalton" data-ans="Wasser-Molekül">Begriff wählen</span>
-          </div>
-          <div style="text-align:center; font-size:0.85rem;">Umkreistes Teilchen Mitte:<br>
-            <span class="drop-slot" data-group="dalton" data-ans="Wasserstoff-Molekül">Begriff wählen</span>
-          </div>
-          <div style="text-align:center; font-size:0.85rem;">Umkreistes Teilchen rechts:<br>
-            <span class="drop-slot" data-group="dalton" data-ans="Sauerstoff-Molekül">Begriff wählen</span>
+            <!-- 2 Hydrogen molecules (center) -->
+            <g transform="translate(320,78)">
+              <circle cx="-10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+              <circle cx="10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+            </g>
+            <g transform="translate(390,78)">
+              <ellipse cx="0" cy="0" rx="28" ry="18" fill="none" stroke="#0f172a" stroke-width="2"/>
+              <circle cx="-10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+              <circle cx="10" cy="0" r="10" fill="url(#whiteAtom)" stroke="#475569"/>
+            </g>
+
+            <text x="455" y="85" font-size="22" font-weight="bold" fill="#0f172a">+</text>
+
+            <!-- 1 Oxygen molecule (right) -->
+            <g transform="translate(550,78)">
+              <ellipse cx="0" cy="0" rx="45" ry="27" fill="none" stroke="#0f172a" stroke-width="2"/>
+              <circle cx="-17" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
+              <circle cx="17" cy="0" r="18" fill="url(#redAtom)" stroke="#7f1d1d"/>
+            </g>
+
+            <!-- Connector lines from Bottom 3 Boxes to circled molecules -->
+            <line x1="90" y1="152" x2="90" y2="115" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
+            <line x1="390" y1="152" x2="390" y2="102" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
+            <line x1="550" y1="152" x2="550" y2="111" stroke="#0f4c81" stroke-width="1.8" marker-end="url(#arrowTip)"/>
+          </svg>
+
+          <!-- Bottom 3 Boxes (Molecules) -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; text-align:center;">
+            <div><span class="drop-slot" data-group="dalton" data-ans="Wasser-Molekül">Teilchen 1</span></div>
+            <div><span class="drop-slot" data-group="dalton" data-ans="Wasserstoff-Molekül">Teilchen 2</span></div>
+            <div><span class="drop-slot" data-group="dalton" data-ans="Sauerstoff-Molekül">Teilchen 3</span></div>
           </div>
         </div>
       </div>
 
-      <div style="margin-top:12px; display:flex; gap:8px;">
+      <div class="no-heft" style="margin-top:12px; display:flex; gap:8px;">
         <button class="btn btn-primary btn-sm" onclick="checkDaltonLabels()">✓ Beschriftung prüfen</button>
         <button class="btn btn-outline btn-sm" onclick="resetGroup('dalton')">Zurücksetzen</button>
       </div>
       <div class="feedback" id="fb-dalton"></div>
     </div>
 
-    <!-- 3C: Dalton Rules Cloze (Task 5) -->
+    <!-- 3C: Dalton Rules Cloze (kept in Hefteintrag!) -->
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">📜 Aufgabe 5: Merksätze zum Dalton-Atommodell</h2>
-        <span class="pill-tag" id="status-st3-t2">Offen</span>
+        <h2 class="card-title">📜 Merksätze zum Dalton-Atommodell</h2>
+        <span class="pill-tag no-heft" id="status-st3-t2">Offen</span>
       </div>
-      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:16px; font-size:0.95rem; line-height:2;">
-        <div>➡ Elemente bestehen aus Atomen oder Molekülen mit einer einzigen
+      <div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:12px; padding:15px; font-size:0.94rem; line-height:2;">
+        <div>➡ <strong>Elemente</strong> bestehen aus Atomen oder Molekülen mit einer einzigen
           <select class="cloze-select" data-group="daltonrules" data-ans="Atomart">
             <option value="">– wählen –</option>
             <option value="Atomart">Atomart</option>
@@ -1402,7 +1641,7 @@
           </select>
           aller Atome eines Elements sind gleich.
         </div>
-        <div>➡ Verbindungen bestehen aus Molekülen mit mindestens
+        <div>➡ <strong>Verbindungen</strong> bestehen aus Molekülen mit mindestens
           <select class="cloze-select" data-group="daltonrules" data-ans="zwei">
             <option value="">– wählen –</option>
             <option value="zwei">zwei</option>
@@ -1410,7 +1649,7 @@
           </select>
           verschiedenen Atomarten.
         </div>
-        <div>➡ Ein Molekül ist ein Teilchen, das aus zwei oder mehreren
+        <div>➡ Ein <strong>Molekül</strong> ist ein Teilchen, das aus zwei oder mehreren
           <select class="cloze-select" data-group="daltonrules" data-ans="Atomen">
             <option value="">– wählen –</option>
             <option value="Atomen">Atomen</option>
@@ -1418,7 +1657,7 @@
           </select>
           zusammengesetzt ist.
         </div>
-        <div>➡ Eine chemische Reaktion kann man mit dem Atommodell von Dalton als
+        <div>➡ Eine <strong>chemische Reaktion</strong> kann man mit dem Atommodell von Dalton als
           <select class="cloze-select" data-group="daltonrules" data-ans="Umgruppierung">
             <option value="">– wählen –</option>
             <option value="Umgruppierung">Umgruppierung</option>
@@ -1429,22 +1668,22 @@
         </div>
       </div>
 
-      <div style="margin-top:12px;">
+      <div class="no-heft" style="margin-top:12px;">
         <button class="btn btn-primary btn-sm" onclick="checkDaltonRules()">✓ Merksätze prüfen</button>
       </div>
       <div class="feedback" id="fb-daltonrules"></div>
     </div>
 
-    <!-- Lernzielkontrolle 2: Volume Ratio 2:1 (Task 7) -->
-    <div class="card">
+    <!-- Lernzielkontrolle 2: Volume Ratio 2:1 (hidden in Hefteintrag) -->
+    <div class="card lzk-card">
       <div class="card-header">
-        <h2 class="card-title">🎯 Lernzielkontrolle 2: Warum entsteht doppelt so viel Wasserstoff wie Sauerstoff? (Aufgabe 7)</h2>
+        <h2 class="card-title">🎯 Lernzielkontrolle 2: Warum entsteht doppelt so viel Wasserstoff wie Sauerstoff?</h2>
         <span class="pill-tag quiz" id="status-st3-q1">Checkpoint</span>
       </div>
-      <p style="font-size:0.9rem; margin-top:0;">
-        Bei der Wasser-Elektrolyse entstehen <strong>30 mL Wasserstoff</strong> und <strong>15 mL Sauerstoff</strong> (Volumenverhältnis <strong>2 : 1</strong>). Vervollständige die schrittweise Begründung mithilfe des Dalton-Atommodells:
+      <p style="font-size:0.89rem; margin-top:0;">
+        Bei der Wasser-Elektrolyse entsteht Wasserstoff und Sauerstoff immer im Volumenverhältnis <strong>2 : 1</strong> (z. B. 30 mL : 15 mL). Vervollständige die schrittweise Begründung mithilfe des Dalton-Atommodells:
       </p>
-      <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:14px; font-size:0.93rem; line-height:1.95;">
+      <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:14px; font-size:0.92rem; line-height:1.95;">
         1. In jedem Wasser-Molekül sind
         <select class="cloze-select" data-group="volratio" data-ans="2 Wasserstoff-Atome und 1 Sauerstoff-Atom">
           <option value="">– wählen –</option>
@@ -1464,7 +1703,7 @@
           <option value="gleiche Volumen">gleiche Volumen</option>
           <option value="gleiche Gewicht">gleiche Gewicht</option>
         </select>
-        einnehmen, beträgt das Volumenverhältnis von Wasserstoff zu Sauerstoff genau <strong>2 : 1</strong> (30 mL : 15 mL).
+        einnehmen, beträgt das Volumenverhältnis von Wasserstoff zu Sauerstoff genau <strong>2 : 1</strong>.
       </div>
       <div style="margin-top:12px;">
         <button class="btn btn-primary btn-sm" onclick="checkVolRatio()">✓ Begründung prüfen</button>
@@ -1472,22 +1711,33 @@
       <div class="feedback" id="fb-volratio"></div>
     </div>
 
+    <!-- Hefteintrag Unlock Bar for Lesson 3 -->
+    <div class="heft-unlock-box">
+      <div>
+        <strong style="color:var(--primary-dark);">📓 Hefteintrag zu „3. Dalton-Atommodell“</strong>
+        <div id="heftStatus-st3" style="font-size:0.84rem; color:var(--text-muted);">Löse alle Aufgaben in Lektion 3, um den fertigen Hefteintrag zu öffnen.</div>
+      </div>
+      <button class="btn btn-primary" id="btnHeft-st3" onclick="enterHeftMode('st3', '3. Das Atommodell nach Dalton')" disabled>
+        📸 Hefteintrag anzeigen
+      </button>
+    </div>
+
     <div class="station-footer">
-      <button class="btn btn-outline" onclick="switchStation('st2')">⬅ Zurück zu Station 2</button>
-      <button class="btn btn-primary" onclick="switchStation('st4')">Weiter zu Station 4: Chemie-Mobile ➔</button>
+      <button class="btn btn-outline" onclick="switchStation('st2')">⬅ Zurück zu 2. Stoffeinteilung</button>
+      <button class="btn btn-primary" onclick="switchStation('st4')">Weiter zu 4. Stoff- und Teilchenebene ➔</button>
     </div>
   </section>
 
-  <!-- ==================== STATION 4 ==================== -->
+  <!-- ==================== 4. STOFF- UND TEILCHENEBENE ==================== -->
   <section class="station" id="st4">
-    <!-- Part 4A: Particle Level (Atom vs Molecule) -->
+    <!-- Part 4A: Particle Level (Atom vs Molecule) with Numbered Badges -->
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">🧩 Teil A: Das Chemie-Mobile – Teilchen-Ebene (Atom vs. Molekül)</h2>
+        <h2 class="card-title">🧩 Teil A: Teilchenebene – Atom oder Molekül?</h2>
         <span class="pill-tag" id="status-st4-t1">Offen</span>
       </div>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
-        Entscheide für jedes dargestellte Teilchen, ob es sich um ein einzelnes <strong>Atom</strong> oder ein aus mehreren Atomen zusammengesetztes <strong>Molekül</strong> handelt.
+        Ordne jedem abgebildeten Teilchen (<strong>①–⑧</strong>) im Auswahlfeld direkt darunter zu, ob es sich um ein einzelnes <strong>Atom</strong> oder ein <strong>Molekül</strong> handelt.
       </p>
 
       <div class="mobile-grid" id="particleCardsGrid"></div>
@@ -1498,14 +1748,14 @@
       <div class="feedback" id="fb-mobile-particles"></div>
     </div>
 
-    <!-- Part 4B: Substance Level in Beakers (Element, Verbindung, Gemisch - Task 6 & Screenshots) -->
+    <!-- Part 4B: Substance Level in Beakers (Element, Verbindung, Gemisch) with Numbered Badges -->
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">🧪 Teil B: Stoff-Ebene im Becherglas (Aufgabe 6 &amp; Chemie-Mobile)</h2>
+        <h2 class="card-title">🧪 Teil B: Stoffebene im Becherglas – Element, Verbindung oder Stoffgemisch?</h2>
         <span class="pill-tag" id="status-st4-t2">Offen</span>
       </div>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0;">
-        Betrachte den Inhalt der Bechergläser auf Teilchenebene (inklusive <strong>Stoff A, B und C</strong> aus Aufgabe 6). Handelt es sich um ein <strong>Element</strong>, eine <strong>Verbindung</strong> oder ein <strong>Stoffgemisch</strong>?
+        Bestimme für jedes Becherglas (<strong>①–⑧</strong>, inklusive <strong>Stoff A, B und C</strong> aus dem Arbeitsblatt) direkt im zugehörigen Feld darunter, um welche Stoffart es sich handelt.
       </p>
 
       <div class="mobile-grid" id="beakerCardsGrid"></div>
@@ -1517,148 +1767,29 @@
     </div>
 
     <div class="station-footer">
-      <button class="btn btn-outline" onclick="switchStation('st3')">⬅ Zurück zu Station 3</button>
-      <button class="btn btn-primary" onclick="switchStation('st5')">Weiter zu Station 5: Check &amp; Hefteintrag ➔</button>
+      <button class="btn btn-outline" onclick="switchStation('st3')">⬅ Zurück zu 3. Dalton-Atommodell</button>
+      <button class="btn btn-primary" onclick="switchStation('st5')">Weiter zu 5. Abschlusscheck ➔</button>
     </div>
   </section>
 
-  <!-- ==================== STATION 5 ==================== -->
+  <!-- ==================== 5. ABSCHLUSSCHECK ==================== -->
   <section class="station" id="st5">
-    <!-- Final Quiz -->
-    <div class="card no-screenshot">
+    <div class="card">
       <div class="card-header">
-        <h2 class="card-title">🏆 Abschluss-Check: Bist du fit für den Hefteintrag?</h2>
+        <h2 class="card-title">🏆 Abschlusscheck: Bist du fit im Thema?</h2>
         <span class="pill-tag quiz" id="status-st5-q1">5 Fragen</span>
       </div>
+      <p style="font-size:0.89rem; color:var(--text-muted); margin-top:0;">
+        Überprüfe zum Abschluss dein Verständnis der Wasser-Elektrolyse, der Stoffeinteilung und des Atommodells nach Dalton.
+      </p>
       <div id="finalQuizContainer"></div>
-      <button class="btn btn-primary" onclick="checkFinalQuiz()">✓ Abschluss-Check auswerten</button>
+      <button class="btn btn-primary" onclick="checkFinalQuiz()">✓ Abschlusscheck auswerten</button>
       <div class="feedback" id="fb-finalquiz"></div>
     </div>
 
-    <!-- Notebook Entry & Screenshot Card -->
-    <div class="card">
-      <div class="card-header no-screenshot">
-        <h2 class="card-title">📓 Heftsicherung &amp; Screenshot-Ansicht</h2>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <input type="text" id="studentNameInput" placeholder="Dein Name (für Screenshot)" oninput="updateStudentName()" style="padding:7px 12px; border:1px solid var(--border); border-radius:8px; font-size:0.88rem;">
-          <button class="btn btn-primary btn-sm" onclick="toggleScreenshotMode()">📸 Screenshot-Modus (Vollbild)</button>
-          <button class="btn btn-outline btn-sm" onclick="window.print()">🖨️ Drucken / PDF</button>
-        </div>
-      </div>
-
-      <div class="heft-sheet" id="heftSheet">
-        <div class="heft-header">
-          <div>
-            <div style="font-size:0.75rem; font-weight:700; color:#0284c7; text-transform:uppercase; letter-spacing:0.05em;">Chemie 9 (SG) · Hefteintrag</div>
-            <h2 style="margin:2px 0 0 0; font-size:1.3rem; color:#0f172a;">Wasser-Elektrolyse &amp; das Atommodell nach Dalton</h2>
-          </div>
-          <div style="text-align:right; font-size:0.85rem; color:#475569;">
-            <div><strong>Name:</strong> <span id="displayStudentName">______________________</span></div>
-            <div><strong>Datum:</strong> <span id="displayDate"></span> · <span id="displayScoreBadge" style="font-weight:700; color:#15803d;">0/11 Aufgaben gelöst</span></div>
-          </div>
-        </div>
-
-        <div class="grid-2" style="gap:14px;">
-          <!-- Section 1 -->
-          <div class="heft-section">
-            <h3>1. Versuch: Die Wasser-Elektrolyse</h3>
-            <p><strong>Durchführung:</strong> Der Hofmannsche Wasserzersetzungsapparat wird mit (leicht angesäuertem) Wasser gefüllt und an eine Gleichstromquelle angeschlossen.</p>
-            <p><strong>Beobachtung:</strong></p>
-            <ul style="padding-left:18px; margin:4px 0;">
-              <li><strong>Pluspol (+):</strong> 15 mL farbloses Gas; <em>Glimmspanprobe</em> positiv (Span flammt auf) ➔ <strong>Sauerstoff</strong></li>
-              <li><strong>Minuspol (–):</strong> 30 mL farbloses Gas; <em>Knallgasprobe</em> positiv (ploppendes Geräusch) ➔ <strong>Wasserstoff</strong></li>
-            </ul>
-            <p><strong>Erklärung (Stoffebene):</strong> Wasser ist eine chemische <strong>Verbindung</strong>, die durch Zufuhr elektrischer Energie in die <strong>Elemente</strong> Wasserstoff und Sauerstoff zerlegt wird (<strong>endotherme Reaktion</strong>).</p>
-            <div class="heft-formula">
-              Wasser (l) <span style="font-weight:400; font-size:0.82rem;">──(elektr. Energie)──▶</span> Wasserstoff (g) + Sauerstoff (g)
-            </div>
-          </div>
-
-          <!-- Section 2 -->
-          <div class="heft-section" style="border-left-color:#15803d;">
-            <h3>2. Stoffeinteilung (Reinstoffe &amp; Stoffgemische)</h3>
-            <p><strong>Verbindung:</strong> Reinstoff, der durch eine chemische Reaktion in andere Reinstoffe zerlegt werden kann (z. B. <em>Wasser, Magnesiumoxid</em>).</p>
-            <p><strong>Element:</strong> Reinstoff, der durch eine chemische Reaktion <u>nicht</u> weiter in andere Reinstoffe zerlegt werden kann (z. B. <em>Wasserstoff, Sauerstoff, Eisen</em>).</p>
-            <div style="background:#fff; border:1px solid #cbd5e1; border-radius:8px; padding:8px 10px; margin-top:8px; font-size:0.83rem;">
-              <div style="text-align:center; font-weight:700; color:#0f4c81;">Stoffe</div>
-              <div style="display:flex; justify-content:space-between; margin-top:4px; gap:8px;">
-                <div style="flex:1; background:#f1f5f9; padding:5px 8px; border-radius:6px;">
-                  <strong>Stoffgemische</strong><br>
-                  • <em>heterogen:</em> Fe-S-Gemenge<br>
-                  • <em>homogen:</em> Kochsalzlösung
-                </div>
-                <div style="align-self:center; font-size:0.75rem; color:#64748b; text-align:center;">physikal.<br>Trennung<br>───▶</div>
-                <div style="flex:1; background:#f0fdf4; padding:5px 8px; border-radius:6px;">
-                  <strong>Reinstoffe</strong><br>
-                  • <em>Verbindungen</em> ↔ <em>Elemente</em><br>
-                  <span style="font-size:0.75rem; color:#15803d;">(chemische Reaktionen)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 3 -->
-        <div class="heft-section" style="border-left-color:#d97706; margin-bottom:0;">
-          <h3>3. Erklärung auf Teilchenebene: Atommodell nach Dalton</h3>
-          <div class="grid-2" style="align-items:center; gap:14px;">
-            <div>
-              <ul style="padding-left:18px; margin:0;">
-                <li><strong>Elemente</strong> bestehen aus Atomen oder Molekülen einer einzigen Atomart. Die <strong>Masse und Größe</strong> aller Atome eines Elements sind gleich.</li>
-                <li><strong>Verbindungen</strong> bestehen aus Molekülen mit mindestens <strong>zwei verschiedenen Atomarten</strong>.</li>
-                <li>Ein <strong>Molekül</strong> ist ein Teilchen aus zwei oder mehreren Atomen.</li>
-                <li>Eine <strong>chemische Reaktion</strong> ist eine <strong>Umgruppierung</strong> der Atome (kein Atom geht verloren!).</li>
-              </ul>
-              <p style="margin-top:6px; font-size:0.85rem; background:#fffbeb; padding:6px 10px; border-radius:6px; border:1px solid #fde68a;">
-                <strong>Volumenverhältnis 2 : 1 (30 mL H₂ : 15 mL O₂):</strong> Aus 2 Wasser-Molekülen entstehen <strong>2 Wasserstoff-Moleküle</strong> und <strong>1 Sauerstoff-Molekül</strong>. Gleiche Teilchenzahlen von Gasen nehmen das gleiche Volumen ein.
-              </p>
-            </div>
-            <div style="background:#fff; border:1px solid #cbd5e1; border-radius:10px; padding:8px; text-align:center;">
-              <svg viewBox="0 0 420 110" style="width:100%; max-height:110px;">
-                <!-- 2 H2O -->
-                <g transform="translate(55,48)">
-                  <circle cx="0" cy="0" r="15" fill="url(#redAtom)" stroke="#7f1d1d"/>
-                  <circle cx="-17" cy="12" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                  <circle cx="17" cy="12" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                </g>
-                <g transform="translate(115,48)">
-                  <circle cx="0" cy="0" r="15" fill="url(#redAtom)" stroke="#7f1d1d"/>
-                  <circle cx="-17" cy="12" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                  <circle cx="17" cy="12" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                </g>
-                <text x="85" y="96" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e293b">2 Wasser-Moleküle</text>
-
-                <text x="165" y="54" font-size="20" font-weight="bold" fill="#0f172a">⟶</text>
-
-                <!-- 2 H2 -->
-                <g transform="translate(215,48)">
-                  <circle cx="-8.5" cy="0" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                  <circle cx="8.5" cy="0" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                </g>
-                <g transform="translate(265,48)">
-                  <circle cx="-8.5" cy="0" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                  <circle cx="8.5" cy="0" r="8.5" fill="url(#whiteAtom)" stroke="#475569"/>
-                </g>
-                <text x="240" y="96" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e293b">2 Wasserstoff-Moleküle</text>
-
-                <text x="312" y="54" font-size="18" font-weight="bold" fill="#0f172a">+</text>
-
-                <!-- 1 O2 -->
-                <g transform="translate(365,48)">
-                  <circle cx="-14" cy="0" r="15" fill="url(#redAtom)" stroke="#7f1d1d"/>
-                  <circle cx="14" cy="0" r="15" fill="url(#redAtom)" stroke="#7f1d1d"/>
-                </g>
-                <text x="365" y="96" font-size="11" font-weight="bold" text-anchor="middle" fill="#1e293b">1 Sauerstoff-Molekül</text>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="station-footer no-screenshot">
-      <button class="btn btn-outline" onclick="switchStation('st4')">⬅ Zurück zu Station 4</button>
-      <span style="font-size:0.86rem; color:var(--text-muted);">Tipp: Mache einen Screenshot des Kastens oben für dein digitales Heft!</span>
+    <div class="station-footer">
+      <button class="btn btn-outline" onclick="switchStation('st4')">⬅ Zurück zu 4. Stoff- und Teilchenebene</button>
+      <span></span>
     </div>
   </section>
 
@@ -1670,7 +1801,20 @@
   const TOTAL_TASKS = 11;
   let selectedChip = null;
 
-  document.getElementById('displayDate').textContent = new Date().toLocaleDateString('de-DE');
+  document.getElementById('heftDateSpan').textContent = new Date().toLocaleDateString('de-DE');
+
+  function syncHeftInlineTexts() {
+    document.querySelectorAll('select.cloze-select').forEach(sel => {
+      let span = sel.nextElementSibling;
+      if (!span || !span.classList.contains('heft-inline-text')) {
+        span = document.createElement('span');
+        span.className = 'heft-inline-text';
+        sel.parentNode.insertBefore(span, sel.nextSibling);
+      }
+      const chosenText = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : sel.value;
+      span.textContent = sel.value ? chosenText : (sel.dataset.ans || '');
+    });
+  }
 
   function markTaskDone(taskId, badgeId) {
     completedTasks.add(taskId);
@@ -1686,27 +1830,47 @@
     const pct = Math.round((count / TOTAL_TASKS) * 100);
     document.getElementById('progressText').textContent = `Fortschritt: ${count} / ${TOTAL_TASKS} Aufgaben`;
     document.getElementById('progressBar').style.width = `${pct}%`;
-    document.getElementById('displayScoreBadge').textContent = `${count}/${TOTAL_TASKS} Aufgaben gelöst (${pct} %)`;
 
-    // Update tab badges
+    // Station 1
     const st1Count = ['st1-app', 'st1-proto', 'st1-lzk1'].filter(x => completedTasks.has(x)).length;
     document.getElementById('badge-st1').textContent = `${st1Count}/3`;
-    if (st1Count === 3) document.querySelector('[data-target="st1"]').classList.add('done');
+    if (st1Count === 3) {
+      document.querySelector('[data-target="st1"]').classList.add('done');
+      document.getElementById('btnHeft-st1').disabled = false;
+      document.getElementById('heftStatus-st1').textContent = '✓ Alle Aufgaben gelöst! Du kannst jetzt den Hefteintrag öffnen und einen Screenshot machen.';
+      document.getElementById('heftStatus-st1').style.color = '#15803d';
+    }
 
+    // Station 2
     const st2Count = ['st2-arrows', 'st2-subs'].filter(x => completedTasks.has(x)).length;
     document.getElementById('badge-st2').textContent = `${st2Count}/2`;
-    if (st2Count === 2) document.querySelector('[data-target="st2"]').classList.add('done');
+    if (st2Count === 2) {
+      document.querySelector('[data-target="st2"]').classList.add('done');
+      document.getElementById('btnHeft-st2').disabled = false;
+      document.getElementById('heftStatus-st2').textContent = '✓ Alle Aufgaben gelöst! Du kannst jetzt den Hefteintrag öffnen und einen Screenshot machen.';
+      document.getElementById('heftStatus-st2').style.color = '#15803d';
+    }
 
+    // Station 3
     const st3Count = ['st3-demokrit', 'st3-dalton', 'st3-rules', 'st3-vol'].filter(x => completedTasks.has(x)).length;
     document.getElementById('badge-st3').textContent = `${st3Count}/4`;
-    if (st3Count === 4) document.querySelector('[data-target="st3"]').classList.add('done');
+    if (st3Count === 4) {
+      document.querySelector('[data-target="st3"]').classList.add('done');
+      document.getElementById('btnHeft-st3').disabled = false;
+      document.getElementById('heftStatus-st3').textContent = '✓ Alle Aufgaben gelöst! Du kannst jetzt den Hefteintrag öffnen und einen Screenshot machen.';
+      document.getElementById('heftStatus-st3').style.color = '#15803d';
+    }
 
+    // Station 4
     const st4Count = ['st4-part', 'st4-beak'].filter(x => completedTasks.has(x)).length;
     document.getElementById('badge-st4').textContent = `${st4Count}/2`;
-    if (st4Count === 2) document.querySelector('[data-target="st4"]').classList.add('done');
+    if (st4Count === 2) {
+      document.querySelector('[data-target="st4"]').classList.add('done');
+    }
   }
 
   function switchStation(id) {
+    exitHeftMode();
     document.querySelectorAll('.station').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -1714,10 +1878,49 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // ==================== HEFTEINTRAG MODE ====================
+  function enterHeftMode(stationId, title) {
+    syncHeftInlineTexts();
+    if (stationId === 'st1') {
+      setHofmannCompletedState();
+    }
+    document.getElementById('heftBannerTitle').textContent = title;
+    document.body.classList.add('heft-mode');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function exitHeftMode() {
+    document.body.classList.remove('heft-mode', 'fullscreen-shot');
+  }
+
+  function toggleFullscreenShot() {
+    document.body.classList.toggle('fullscreen-shot');
+  }
+
   // ==================== STATION 1: HOFMANN SIMULATION ====================
   let electroRunning = false;
-  let electroProgress = 0; // 0 to 100 (%)
+  let electroProgress = 0;
   let electroInterval = null;
+
+  function setHofmannCompletedState() {
+    electroRunning = false;
+    clearInterval(electroInterval);
+    electroProgress = 100;
+    document.getElementById('volTextLeft').textContent = '15 mL';
+    document.getElementById('volTextRight').textContent = '30 mL';
+    document.getElementById('waterLeft').setAttribute('y', 125);
+    document.getElementById('waterLeft').setAttribute('height', 159);
+    document.getElementById('waterRight').setAttribute('y', 180);
+    document.getElementById('waterRight').setAttribute('height', 104);
+    document.getElementById('waterBulb').setAttribute('y', 75);
+    document.getElementById('waterBulb').setAttribute('height', 66);
+    document.getElementById('bubblesLayer').innerHTML = '';
+    document.getElementById('btnTestO2').disabled = false;
+    document.getElementById('btnTestH2').disabled = false;
+    const btn = document.getElementById('btnTogglePower');
+    btn.textContent = '✓ Elektrolyse beendet';
+    btn.className = 'btn btn-success';
+  }
 
   function toggleElectrolysis() {
     if (electroProgress >= 100) {
@@ -1747,35 +1950,31 @@
     document.getElementById('volTextLeft').textContent = `${o2Vol} mL`;
     document.getElementById('volTextRight').textContent = `${h2Vol} mL`;
 
-    // Left water drops by up to 55px (15 mL mark at y=120)
     const dropLeft = (electroProgress / 100) * 55;
-    document.getElementById('waterLeft').setAttribute('y', 65 + dropLeft);
+    document.getElementById('waterLeft').setAttribute('y', 70 + dropLeft);
     document.getElementById('waterLeft').setAttribute('height', 214 - dropLeft);
 
-    // Right water drops by up to 110px (30 mL mark at y=175)
     const dropRight = (electroProgress / 100) * 110;
-    document.getElementById('waterRight').setAttribute('y', 65 + dropRight);
+    document.getElementById('waterRight').setAttribute('y', 70 + dropRight);
     document.getElementById('waterRight').setAttribute('height', 214 - dropRight);
 
-    // Bulb water rises
     const riseBulb = (electroProgress / 100) * 26;
-    document.getElementById('waterBulb').setAttribute('y', 96 - riseBulb);
+    document.getElementById('waterBulb').setAttribute('y', 101 - riseBulb);
     document.getElementById('waterBulb').setAttribute('height', 40 + riseBulb);
 
-    // Draw rising bubbles (twice as many on right!)
     const bubblesLayer = document.getElementById('bubblesLayer');
     bubblesLayer.innerHTML = '';
-    const leftTop = 65 + dropLeft;
-    const rightTop = 65 + dropRight;
+    const leftTop = 70 + dropLeft;
+    const rightTop = 70 + dropRight;
 
     for (let i = 0; i < 4; i++) {
-      const by = 230 - ((Date.now() / 12 + i * 38) % Math.max(20, (230 - leftTop)));
-      const bx = 96 + ((i * 7) % 11);
+      const by = 235 - ((Date.now() / 12 + i * 38) % Math.max(20, (235 - leftTop)));
+      const bx = 106 + ((i * 7) % 11);
       bubblesLayer.innerHTML += `<circle cx="${bx}" cy="${by}" r="2.5" fill="#ffffff" opacity="0.85"/>`;
     }
     for (let i = 0; i < 8; i++) {
-      const by = 230 - ((Date.now() / 10 + i * 22) % Math.max(20, (230 - rightTop)));
-      const bx = 353 + ((i * 5) % 13);
+      const by = 235 - ((Date.now() / 10 + i * 22) % Math.max(20, (235 - rightTop)));
+      const bx = 363 + ((i * 5) % 13);
       bubblesLayer.innerHTML += `<circle cx="${bx}" cy="${by}" r="2.7" fill="#ffffff" opacity="0.9"/>`;
     }
 
@@ -1785,12 +1984,7 @@
     }
 
     if (electroProgress >= 100) {
-      electroRunning = false;
-      clearInterval(electroInterval);
-      bubblesLayer.innerHTML = '';
-      const btn = document.getElementById('btnTogglePower');
-      btn.textContent = '✓ Elektrolyse beendet';
-      btn.classList.replace('btn-warning', 'btn-success');
+      setHofmannCompletedState();
       showFeedback('simFeedback', 'ok', 'Beobachtung: Am Pluspol (links) haben sich <strong>15 mL</strong> Gas gesammelt, am Minuspol (rechts) genau doppelt so viel (<strong>30 mL</strong>). Teste jetzt beide Gase!');
     }
   }
@@ -1801,11 +1995,11 @@
     electroProgress = 0;
     document.getElementById('volTextLeft').textContent = '0 mL';
     document.getElementById('volTextRight').textContent = '0 mL';
-    document.getElementById('waterLeft').setAttribute('y', 65);
+    document.getElementById('waterLeft').setAttribute('y', 70);
     document.getElementById('waterLeft').setAttribute('height', 214);
-    document.getElementById('waterRight').setAttribute('y', 65);
+    document.getElementById('waterRight').setAttribute('y', 70);
     document.getElementById('waterRight').setAttribute('height', 214);
-    document.getElementById('waterBulb').setAttribute('y', 96);
+    document.getElementById('waterBulb').setAttribute('y', 101);
     document.getElementById('waterBulb').setAttribute('height', 40);
     document.getElementById('bubblesLayer').innerHTML = '';
     document.getElementById('testAnimLayer').innerHTML = '';
@@ -1823,20 +2017,20 @@
     if (electroRunning) toggleElectrolysis();
     const layer = document.getElementById('testAnimLayer');
     if (type === 'o2') {
-      document.getElementById('valveLeft').setAttribute('transform', 'rotate(90 101 47)');
+      document.getElementById('valveLeft').setAttribute('transform', 'rotate(90 111 52)');
       layer.innerHTML = `
-        <line x1="35" y1="22" x2="96" y2="38" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="100" cy="38" r="11" fill="#fde047" opacity="0.9"/>
-        <polygon points="100,14 91,36 109,36" fill="#f97316"/>
-        <text x="100" y="12" font-size="11" font-weight="bold" fill="#b45309" text-anchor="middle">Flammt auf!</text>
+        <line x1="55" y1="24" x2="106" y2="42" stroke="#92400e" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="110" cy="42" r="11" fill="#fde047" opacity="0.9"/>
+        <polygon points="110,16 101,38 119,38" fill="#f97316"/>
+        <text x="110" y="13" font-size="11" font-weight="bold" fill="#b45309" text-anchor="middle">Flammt auf!</text>
       `;
       showFeedback('simFeedback', 'ok', '🔥 <strong>Glimmspanprobe (Pluspol):</strong> Der glimmende Holzspan flammt bei Kontakt mit dem Gas hell auf. ➔ <strong>Nachweis von Sauerstoff!</strong>');
     } else {
-      document.getElementById('valveRight').setAttribute('transform', 'rotate(90 359 47)');
+      document.getElementById('valveRight').setAttribute('transform', 'rotate(90 369 52)');
       layer.innerHTML = `
-        <path d="M349,38 L349,10 A10,10 0 0,1 369,10 L369,38" fill="#fef08a" stroke="#475569" stroke-width="2"/>
-        <polygon points="359,42 344,24 353,27 359,14 365,27 374,24" fill="#ef4444" stroke="#facc15" stroke-width="1.5"/>
-        <text x="359" y="12" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">PLOPP!</text>
+        <path d="M359,42 L359,14 A10,10 0 0,1 379,14 L379,42" fill="#fef08a" stroke="#475569" stroke-width="2"/>
+        <polygon points="369,46 354,28 363,31 369,18 375,31 384,28" fill="#ef4444" stroke="#facc15" stroke-width="1.5"/>
+        <text x="369" y="12" font-size="11" font-weight="bold" fill="#b91c1c" text-anchor="middle">PLOPP!</text>
       `;
       showFeedback('simFeedback', 'ok', '💥 <strong>Knallgasprobe (Minuspol):</strong> Das aufgefangene Gas verbrennt mit einem typischen ploppenden/knallenden Geräusch. ➔ <strong>Nachweis von Wasserstoff!</strong>');
     }
@@ -1844,6 +2038,8 @@
 
   // ==================== GENERIC TAP-TO-ASSIGN SYSTEM ====================
   document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('heft-mode')) return;
+
     const chip = e.target.closest('.chip');
     if (chip && !chip.classList.contains('used')) {
       document.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
@@ -1858,8 +2054,7 @@
 
     const slot = e.target.closest('.drop-slot');
     if (slot) {
-      if (selectedChip) {
-        // Return previous chip if slot already had one
+      if (selectedChip && selectedChip.dataset.val) {
         if (slot.dataset.placedVal) {
           releaseChip(slot.dataset.group, slot.dataset.placedVal);
         }
@@ -1872,7 +2067,6 @@
         selectedChip.classList.add('used');
         selectedChip = null;
       } else if (slot.dataset.placedVal) {
-        // Clear slot on tap if no chip is selected
         releaseChip(slot.dataset.group, slot.dataset.placedVal);
         slot.textContent = 'Hier tippen';
         delete slot.dataset.placedVal;
@@ -1919,24 +2113,21 @@
     });
 
     if (filledCount < slots.length) {
-      showFeedback(fbId, 'err', 'Bitte fülle zuerst alle Felder aus!');
-      return;
+      if (fbId) showFeedback(fbId, 'err', 'Bitte fülle zuerst alle Felder aus!');
+      return false;
     }
     if (allOk) {
-      showFeedback(fbId, 'ok', 'Perfekt! Alle Begriffe wurden richtig zugeordnet.');
+      if (fbId) showFeedback(fbId, 'ok', 'Perfekt! Alle Begriffe wurden richtig zugeordnet.');
       markTaskDone(taskId, statusId);
+      return true;
     } else {
-      showFeedback(fbId, 'err', 'Einige Begriffe stimmen noch nicht (rot markiert). Tippe ein rotes Feld an, um es zu leeren, und ordne neu zu.');
+      if (fbId) showFeedback(fbId, 'err', 'Einige Begriffe stimmen noch nicht (rot markiert). Tippe ein rotes Feld an, um es zu leeren, und ordne neu zu.');
+      return false;
     }
   }
 
   function checkApparatusLabels() {
     checkDropGroup('apparatus', 'fb-apparatus', 'st1-app', 'status-st1-t1');
-  }
-
-  function checkArrows() {
-    checkDropGroup('arrows', 'fb-arrows', 'st2-arrows', null);
-    updateSt2Badge();
   }
 
   function checkDaltonLabels() {
@@ -1966,6 +2157,7 @@
     if (allOk) {
       showFeedback(fbId, 'ok', successMsg);
       markTaskDone(taskId, statusId);
+      syncHeftInlineTexts();
     } else {
       showFeedback(fbId, 'err', 'Noch nicht ganz – überprüfe die rot umrandeten Lücken!');
     }
@@ -1980,7 +2172,7 @@
   }
 
   function checkVolRatio() {
-    checkClozeGroup('volratio', 'fb-volratio', 'st3-vol', 'status-st3-q1', 'Genau richtig! Aus 2 H₂O-Molekülen entstehen 2 H₂-Moleküle und 1 O₂-Molekül – daher das Volumenverhältnis 2 : 1 (30 mL : 15 mL).');
+    checkClozeGroup('volratio', 'fb-volratio', 'st3-vol', 'status-st3-q1', 'Genau richtig! Aus 2 H₂O-Molekülen entstehen 2 H₂-Moleküle und 1 O₂-Molekül – daher das Volumenverhältnis 2 : 1.');
   }
 
   // ==================== SINGLE CHOICE QUIZZES ====================
@@ -2004,15 +2196,16 @@
     } else if (quizKey === 'demokrit') {
       if (isCorrect) {
         showFeedback('fb-demokrit', 'ok', 'Treffer! Genau deshalb brauchen wir das Atommodell nach Dalton: Moleküle bestehen aus Atomen, die bei einer Reaktion neu gruppiert werden.');
-        markTaskDone('st3-demokrit', null);
+        markTaskDone('st3-demokrit', 'status-st3-dem');
       } else {
-        showFeedback('fb-demokrit', 'err', 'Überlege noch einmal: Warum können aus unveränderlichen Wasser-Teilchen plötzlich Wasserstoff- und Sauerstoff-Teilchen werden?');
+        showFeedback('fb-demokrit', 'err', 'Nicht richtig – vergleiche die Aussagen genau: Beim einfachen Teilchenmodell bleiben Teilchen unveränderlich, bei einer chemischen Reaktion entstehen aber neue Stoffe!');
       }
     }
   }
 
-  // ==================== STATION 2: SUBSTANCES BUCKETS ====================
+  // ==================== STATION 2: TREE DIAGRAM & SUBSTANCES ====================
   function placeSubstance(category) {
+    if (document.body.classList.contains('heft-mode')) return;
     if (!selectedChip || !selectedChip.dataset.sub) return;
     const subName = selectedChip.dataset.sub;
     const trueCat = selectedChip.dataset.cat;
@@ -2023,8 +2216,9 @@
     item.dataset.sub = subName;
     item.dataset.trueCat = trueCat;
     item.dataset.placedCat = category;
-    item.innerHTML = `<span>${subName}</span><span style="font-size:0.75rem; opacity:0.6;">✕</span>`;
+    item.innerHTML = `<span>${subName}</span><span class="del-x" style="font-size:0.75rem; opacity:0.6;">✕</span>`;
     item.onclick = (e) => {
+      if (document.body.classList.contains('heft-mode')) return;
       e.stopPropagation();
       item.remove();
       document.querySelectorAll('#pool-substances .chip').forEach(c => {
@@ -2038,14 +2232,13 @@
     selectedChip = null;
   }
 
-  function checkSubstances() {
+  function checkStation2All() {
+    const arrowsOk = checkDropGroup('arrows', null, 'st2-arrows', null);
+
     const items = document.querySelectorAll('.placed-item');
     const totalChips = document.querySelectorAll('#pool-substances .chip').length;
-    if (items.length < totalChips) {
-      showFeedback('fb-substances', 'err', `Es sind erst ${items.length} von ${totalChips} Stoffen zugeordnet. Ordne bitte alle Beispiele ein!`);
-      return;
-    }
-    let allOk = true;
+    let subsOk = true;
+
     items.forEach(item => {
       if (item.dataset.trueCat === item.dataset.placedCat) {
         item.classList.add('ok');
@@ -2053,29 +2246,31 @@
       } else {
         item.classList.add('bad');
         item.classList.remove('ok');
-        allOk = false;
+        subsOk = false;
       }
     });
 
-    if (allOk) {
-      showFeedback('fb-substances', 'ok', 'Hervorragend! Alle 10 Stoffe sind perfekt eingeordnet (inklusive der Oxide als Verbindungen und der Metalle/Nichtmetalle als Elemente).');
-      markTaskDone('st2-subs', null);
-      updateSt2Badge();
+    if (items.length < totalChips) {
+      subsOk = false;
+    }
+
+    if (arrowsOk && subsOk) {
+      markTaskDone('st2-subs', 'status-st2-all');
+      showFeedback('fb-st2', 'ok', 'Hervorragend! Sowohl die Übergänge (Physikalische Trennverfahren & Chemische Reaktionen) als auch alle 10 Stoffbeispiele sind im Baumdiagramm richtig eingeordnet.');
+    } else if (!arrowsOk) {
+      showFeedback('fb-st2', 'err', 'Überprüfe noch die beiden Übergangspfeile im Baumdiagramm (Übergang 1 & Übergang 2).');
+    } else if (items.length < totalChips) {
+      showFeedback('fb-st2', 'err', `Es sind erst ${items.length} von ${totalChips} Stoffen im Baumdiagramm eingeordnet!`);
     } else {
-      showFeedback('fb-substances', 'err', 'Einige Stoffe liegen noch in der falschen Kategorie (rot). Tippe einen roten Stoff an, um ihn zurückzulegen.');
+      showFeedback('fb-st2', 'err', 'Einige Stoffe im Baumdiagramm liegen noch in der falschen Kategorie (rot). Tippe einen roten Stoff an, um ihn zurückzulegen.');
     }
   }
 
-  function resetSubstances() {
+  function resetStation2() {
+    resetGroup('arrows');
     document.querySelectorAll('.bucket-items').forEach(b => b.innerHTML = '');
     document.querySelectorAll('#pool-substances .chip').forEach(c => c.classList.remove('used', 'selected'));
-    document.getElementById('fb-substances').classList.remove('show');
-  }
-
-  function updateSt2Badge() {
-    if (completedTasks.has('st2-arrows') && completedTasks.has('st2-subs')) {
-      document.getElementById('status-st2-all').textContent = '✓ Gelöst';
-    }
+    document.getElementById('fb-st2').classList.remove('show');
   }
 
   // ==================== STATION 3: DALTON ANIMATION ====================
@@ -2090,344 +2285,92 @@
 
     if (step === 1) {
       cap.textContent = 'Schritt 1: Zwei Wasser-Moleküle (je 1 Sauerstoff-Atom + 2 Wasserstoff-Atome)';
-      o1.setAttribute('transform', 'translate(150, 95)');
-      h1.setAttribute('transform', 'translate(122, 118)');
-      h2.setAttribute('transform', 'translate(178, 118)');
-      o2.setAttribute('transform', 'translate(275, 95)');
-      h3.setAttribute('transform', 'translate(247, 118)');
-      h4.setAttribute('transform', 'translate(303, 118)');
+      o1.setAttribute('transform', 'translate(150, 90)');
+      h1.setAttribute('transform', 'translate(122, 112)');
+      h2.setAttribute('transform', 'translate(178, 112)');
+      o2.setAttribute('transform', 'translate(275, 90)');
+      h3.setAttribute('transform', 'translate(247, 112)');
+      h4.setAttribute('transform', 'translate(303, 112)');
     } else if (step === 2) {
       cap.textContent = 'Schritt 2: Elektrische Energie spaltet die Bindungen – 6 einzelne Atome liegen vor';
-      o1.setAttribute('transform', 'translate(220, 75)');
-      o2.setAttribute('transform', 'translate(450, 75)');
-      h1.setAttribute('transform', 'translate(130, 115)');
-      h2.setAttribute('transform', 'translate(300, 120)');
-      h3.setAttribute('transform', 'translate(380, 115)');
-      h4.setAttribute('transform', 'translate(540, 115)');
+      o1.setAttribute('transform', 'translate(220, 72)');
+      o2.setAttribute('transform', 'translate(450, 72)');
+      h1.setAttribute('transform', 'translate(130, 110)');
+      h2.setAttribute('transform', 'translate(300, 115)');
+      h3.setAttribute('transform', 'translate(380, 110)');
+      h4.setAttribute('transform', 'translate(540, 110)');
     } else if (step === 3) {
       cap.textContent = 'Schritt 3: Umgruppierung zu 2 Wasserstoff-Molekülen (links) + 1 Sauerstoff-Molekül (rechts)';
-      h1.setAttribute('transform', 'translate(155, 95)');
-      h2.setAttribute('transform', 'translate(181, 95)');
-      h3.setAttribute('transform', 'translate(275, 95)');
-      h4.setAttribute('transform', 'translate(301, 95)');
-      o1.setAttribute('transform', 'translate(475, 95)');
-      o2.setAttribute('transform', 'translate(523, 95)');
+      h1.setAttribute('transform', 'translate(155, 90)');
+      h2.setAttribute('transform', 'translate(181, 90)');
+      h3.setAttribute('transform', 'translate(275, 90)');
+      h4.setAttribute('transform', 'translate(301, 90)');
+      o1.setAttribute('transform', 'translate(475, 90)');
+      o2.setAttribute('transform', 'translate(523, 90)');
     }
   }
 
-  // ==================== STATION 4: CHEMIE-MOBILE ====================
+  // ==================== STATION 4: STOFF- UND TEILCHENEBENE ====================
   const particleItems = [
     {
-      id: 'p1', label: 'Teilchen 1', ans: 'Atom',
+      id: 'p1', num: 1, label: 'Teilchen', ans: 'Atom',
       svg: `<circle cx="50" cy="45" r="20" fill="#fde047" stroke="#ca8a04" stroke-width="2"/>`
     },
     {
-      id: 'p2', label: 'Teilchen 2', ans: 'Molekül',
+      id: 'p2', num: 2, label: 'Teilchen', ans: 'Molekül',
       svg: `<circle cx="37" cy="45" r="16" fill="#ef4444" stroke="#991b1b" stroke-width="2"/><circle cx="63" cy="45" r="16" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>`
     },
     {
-      id: 'p3', label: 'Teilchen 3', ans: 'Molekül',
+      id: 'p3', num: 3, label: 'Teilchen', ans: 'Molekül',
       svg: `<circle cx="50" cy="42" r="16" fill="#ef4444" stroke="#991b1b" stroke-width="2"/><circle cx="33" cy="56" r="9" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/><circle cx="67" cy="56" r="9" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>`
     },
     {
-      id: 'p4', label: 'Teilchen 4', ans: 'Atom',
+      id: 'p4', num: 4, label: 'Teilchen', ans: 'Atom',
       svg: `<circle cx="50" cy="45" r="18" fill="#86efac" stroke="#15803d" stroke-width="2"/>`
     },
     {
-      id: 'p5', label: 'Teilchen 5', ans: 'Molekül',
+      id: 'p5', num: 5, label: 'Teilchen', ans: 'Molekül',
       svg: `<circle cx="50" cy="45" r="15" fill="#1e293b"/><circle cx="50" cy="23" r="8" fill="#f8fafc" stroke="#475569"/><circle cx="50" cy="67" r="8" fill="#f8fafc" stroke="#475569"/><circle cx="28" cy="45" r="8" fill="#f8fafc" stroke="#475569"/><circle cx="72" cy="45" r="8" fill="#f8fafc" stroke="#475569"/>`
     },
     {
-      id: 'p6', label: 'Teilchen 6', ans: 'Atom',
+      id: 'p6', num: 6, label: 'Teilchen', ans: 'Atom',
       svg: `<circle cx="50" cy="45" r="10" fill="#f8fafc" stroke="#475569" stroke-width="2"/>`
     },
     {
-      id: 'p7', label: 'Teilchen 7', ans: 'Molekül',
+      id: 'p7', num: 7, label: 'Teilchen', ans: 'Molekül',
       svg: `<circle cx="50" cy="45" r="15" fill="#1e293b"/><circle cx="27" cy="54" r="14" fill="#ef4444" stroke="#991b1b"/><circle cx="73" cy="36" r="14" fill="#ef4444" stroke="#991b1b"/>`
     },
     {
-      id: 'p8', label: 'Teilchen 8', ans: 'Molekül',
+      id: 'p8', num: 8, label: 'Teilchen', ans: 'Molekül',
       svg: `<circle cx="50" cy="42" r="15" fill="#3b82f6" stroke="#1d4ed8"/><circle cx="50" cy="21" r="8" fill="#f8fafc" stroke="#475569"/><circle cx="33" cy="56" r="8" fill="#f8fafc" stroke="#475569"/><circle cx="67" cy="56" r="8" fill="#f8fafc" stroke="#475569"/>`
     }
   ];
 
   const beakerItems = [
     {
-      id: 'b1', label: 'Becherglas 1', ans: 'Element',
+      id: 'b1', num: 1, label: 'Becherglas', ans: 'Element',
       svg: `<circle cx="34" cy="34" r="11" fill="#fde047" stroke="#ca8a04"/><circle cx="64" cy="44" r="11" fill="#fde047" stroke="#ca8a04"/><circle cx="40" cy="66" r="11" fill="#fde047" stroke="#ca8a04"/>`
     },
     {
-      id: 'b2', label: 'Becherglas 2', ans: 'Element',
+      id: 'b2', num: 2, label: 'Becherglas', ans: 'Element',
       svg: `<g transform="translate(34,30)"><circle cx="-6" cy="0" r="7" fill="#ef4444"/><circle cx="6" cy="0" r="7" fill="#ef4444"/></g>
             <g transform="translate(65,42) rotate(30)"><circle cx="-6" cy="0" r="7" fill="#ef4444"/><circle cx="6" cy="0" r="7" fill="#ef4444"/></g>
             <g transform="translate(42,66) rotate(-20)"><circle cx="-6" cy="0" r="7" fill="#ef4444"/><circle cx="6" cy="0" r="7" fill="#ef4444"/></g>`
     },
     {
-      id: 'b3', label: 'Stoff B (AB Aufg. 6)', ans: 'Element',
+      id: 'b3', num: 3, label: 'Stoff B (AB Aufg. 6)', ans: 'Element',
       svg: `<g transform="translate(36,30)"><circle cx="-7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/><circle cx="7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/></g>
             <g transform="translate(64,52) rotate(25)"><circle cx="-7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/><circle cx="7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/></g>
             <g transform="translate(36,68) rotate(-15)"><circle cx="-7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/><circle cx="7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/></g>`
     },
     {
-      id: 'b4', label: 'Stoff A (AB Aufg. 6)', ans: 'Verbindung',
+      id: 'b4', num: 4, label: 'Stoff A (AB Aufg. 6)', ans: 'Verbindung',
       svg: `<g transform="translate(34,32)"><circle cx="0" cy="0" r="9" fill="#3b82f6"/><circle cx="0" cy="-11" r="4.5" fill="#fff" stroke="#475569"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(66,46)"><circle cx="0" cy="0" r="9" fill="#3b82f6"/><circle cx="0" cy="-11" r="4.5" fill="#fff" stroke="#475569"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(42,68)"><circle cx="0" cy="0" r="9" fill="#3b82f6"/><circle cx="0" cy="-11" r="4.5" fill="#fff" stroke="#475569"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>`
     },
     {
-      id: 'b5', label: 'Becherglas 5', ans: 'Verbindung',
+      id: 'b5', num: 5, label: 'Becherglas', ans: 'Verbindung',
       svg: `<g transform="translate(35,32)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(65,42)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(44,66)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>`
-    },
-    {
-      id: 'b6', label: 'Becherglas 6', ans: 'Verbindung',
-      svg: `<g transform="translate(38,32)"><circle cx="0" cy="0" r="7" fill="#1e293b"/><circle cx="-11" cy="0" r="6.5" fill="#ef4444"/><circle cx="11" cy="0" r="6.5" fill="#ef4444"/></g>
-            <g transform="translate(60,55) rotate(-25)"><circle cx="0" cy="0" r="7" fill="#1e293b"/><circle cx="-11" cy="0" r="6.5" fill="#ef4444"/><circle cx="11" cy="0" r="6.5" fill="#ef4444"/></g>`
-    },
-    {
-      id: 'b7', label: 'Stoff C (Gemisch)', ans: 'Stoffgemisch',
-      svg: `<circle cx="32" cy="30" r="9" fill="#86efac" stroke="#15803d"/>
-            <circle cx="66" cy="64" r="9" fill="#86efac" stroke="#15803d"/>
-            <g transform="translate(62,32)"><circle cx="0" cy="0" r="8" fill="#ef4444"/><circle cx="-8" cy="6" r="4" fill="#fff" stroke="#475569"/><circle cx="8" cy="6" r="4" fill="#fff" stroke="#475569"/></g>
-            <g transform="translate(36,62)"><circle cx="0" cy="0" r="8" fill="#ef4444"/><circle cx="-8" cy="6" r="4" fill="#fff" stroke="#475569"/><circle cx="8" cy="6" r="4" fill="#fff" stroke="#475569"/></g>`
-    },
-    {
-      id: 'b8', label: 'Becherglas 8', ans: 'Stoffgemisch',
-      svg: `<g transform="translate(34,28)"><circle cx="-5" cy="0" r="6" fill="#ef4444"/><circle cx="5" cy="0" r="6" fill="#ef4444"/></g>
-            <g transform="translate(64,34)"><circle cx="0" cy="0" r="8" fill="#3b82f6"/><circle cx="-8" cy="6" r="4" fill="#fff" stroke="#475569"/><circle cx="8" cy="6" r="4" fill="#fff" stroke="#475569"/></g>
-            <g transform="translate(46,64)"><circle cx="0" cy="0" r="6.5" fill="#1e293b"/><circle cx="-10" cy="0" r="6" fill="#ef4444"/><circle cx="10" cy="0" r="6" fill="#ef4444"/></g>`
-    }
-  ];
-
-  function renderChemieMobile() {
-    const pGrid = document.getElementById('particleCardsGrid');
-    pGrid.innerHTML = particleItems.map(p => `
-      <div class="beaker-card" id="card-${p.id}">
-        <div class="beaker-title">${p.label}</div>
-        <svg viewBox="0 0 100 90" style="width:95px; height:85px;">${p.svg}</svg>
-        <select class="cloze-select" data-mobile-part="${p.id}" data-ans="${p.ans}" style="width:100%; font-size:0.84rem;">
-          <option value="">– auswählen –</option>
-          <option value="Atom">Atom</option>
-          <option value="Molekül">Molekül</option>
-        </select>
-      </div>
-    `).join('');
-
-    const bGrid = document.getElementById('beakerCardsGrid');
-    bGrid.innerHTML = beakerItems.map(b => `
-      <div class="beaker-card" id="card-${b.id}">
-        <div class="beaker-title">${b.label}</div>
-        <svg viewBox="0 0 100 90" style="width:100px; height:90px;">
-          <path d="M18,12 L18,76 A6,6 0 0,0 24,82 L76,82 A6,6 0 0,0 82,76 L82,12" fill="#f8fafc" stroke="#475569" stroke-width="2.5"/>
-          <line x1="14" y1="12" x2="22" y2="12" stroke="#475569" stroke-width="2.5"/>
-          <line x1="78" y1="12" x2="86" y2="12" stroke="#475569" stroke-width="2.5"/>
-          ${b.svg}
-        </svg>
-        <select class="cloze-select" data-mobile-beak="${b.id}" data-ans="${b.ans}" style="width:100%; font-size:0.84rem;">
-          <option value="">– Stoffart –</option>
-          <option value="Element">Element</option>
-          <option value="Verbindung">Verbindung</option>
-          <option value="Stoffgemisch">Stoffgemisch</option>
-        </select>
-      </div>
-    `).join('');
-  }
-
-  function checkParticlesMobile() {
-    const selects = document.querySelectorAll('select[data-mobile-part]');
-    let allOk = true, empty = false;
-    selects.forEach(s => {
-      const card = document.getElementById(`card-${s.dataset.mobilePart}`);
-      if (!s.value) empty = true;
-      if (s.value === s.dataset.ans) {
-        card.classList.add('ok'); card.classList.remove('bad');
-      } else {
-        card.classList.add('bad'); card.classList.remove('ok');
-        allOk = false;
-      }
-    });
-    if (empty) {
-      showFeedback('fb-mobile-particles', 'err', 'Bitte ordne alle 8 Teilchen zu!');
-      return;
-    }
-    if (allOk) {
-      showFeedback('fb-mobile-particles', 'ok', 'Super! Einzelne Kugeln = Atome; fest miteinander verbundene Kugelgruppen = Moleküle.');
-      markTaskDone('st4-part', 'status-st4-t1');
-    } else {
-      showFeedback('fb-mobile-particles', 'err', 'Einige Karten sind noch falsch (rot). Merke: Sobald mindestens 2 Atome aneinanderhängen, ist es ein Molekül!');
-    }
-  }
-
-  function checkBeakersMobile() {
-    const selects = document.querySelectorAll('select[data-mobile-beak]');
-    let allOk = true, empty = false;
-    selects.forEach(s => {
-      const card = document.getElementById(`card-${s.dataset.mobileBeak}`);
-      if (!s.value) empty = true;
-      if (s.value === s.dataset.ans) {
-        card.classList.add('ok'); card.classList.remove('bad');
-      } else {
-        card.classList.add('bad'); card.classList.remove('ok');
-        allOk = false;
-      }
-    });
-    if (empty) {
-      showFeedback('fb-mobile-beakers', 'err', 'Bitte bestimme alle 8 Bechergläser!');
-      return;
-    }
-    if (allOk) {
-      showFeedback('fb-mobile-beakers', 'ok', 'Perfekt gelöst! Auch zweiatomige Moleküle (wie O₂ oder N₂ in Stoff B) sind Elemente, solange alle Atome zur gleichen Atomart gehören.');
-      markTaskDone('st4-beak', 'status-st4-t2');
-    } else {
-      showFeedback('fb-mobile-beakers', 'err', 'Prüfe die rot markierten Bechergläser: Sind nur gleiche Teilchen enthalten (Reinstoff) oder verschiedene (Stoffgemisch)?');
-    }
-  }
-
-  // ==================== STATION 5: FINAL QUIZ & HEFTEINTRAG ====================
-  const finalQuestions = [
-    {
-      q: '1. Ein Sauerstoff-Molekül besteht aus zwei gleichen Sauerstoff-Atomen. Handelt es sich bei Sauerstoff um ein Element oder eine Verbindung?',
-      opts: [
-        'Um eine Verbindung, weil ein Molekül vorliegt.',
-        'Um ein Element, weil nur eine einzige Atomart vorkommt.',
-        'Um ein homogenes Stoffgemisch.'
-      ],
-      ans: 1
-    },
-    {
-      q: '2. Welche Beobachtung macht man am Pluspol des Hofmannschen Wasserzersetzungsapparats?',
-      opts: [
-        'Es entstehen 30 mL Gas, die Knallgasprobe ist positiv.',
-        'Es entstehen 15 mL Gas, der glimmende Holzspan flammt wieder auf.',
-        'Es bildet sich ein weißer Niederschlag.'
-      ],
-      ans: 1
-    },
-    {
-      q: '3. Warum bleibt die Gesamtmasse bei der Wasser-Elektrolyse im geschlossenen System gleich?',
-      opts: [
-        'Weil Atome bei chemischen Reaktionen weder neu entstehen noch verschwinden, sondern nur umgruppiert werden.',
-        'Weil Wasser und Gas immer gleich schwer sind.',
-        'Weil elektrische Energie keine Masse hat.'
-      ],
-      ans: 0
-    },
-    {
-      q: '4. Was unterscheidet flüssiges Wasser von einem Gasgemisch aus Wasserstoff und Sauerstoff (Knallgas)?',
-      opts: [
-        'Gar nichts, beides sind Stoffgemische.',
-        'Wasser ist eine chemische Verbindung aus verbundenen H₂O-Molekülen; Knallgas ist ein Stoffgemisch aus getrennten H₂- und O₂-Molekülen.'
-      ],
-      ans: 1
-    },
-    {
-      q: '5. Welcher Begriff beschreibt die Energiebilanz der Wasser-Elektrolyse korrekt?',
-      opts: [
-        'Exotherme Reaktion (gibt dauerhaft Strom ab)',
-        'Endotherme Reaktion (benötigt ständige Zufuhr elektrischer Energie)'
-      ],
-      ans: 1
-    }
-  ];
-
-  const finalAnswers = {};
-
-  function renderFinalQuiz() {
-    const container = document.getElementById('finalQuizContainer');
-    container.innerHTML = finalQuestions.map((item, qIdx) => `
-      <div style="margin-bottom:14px; padding-bottom:10px; border-bottom:1px dashed #e2e8f0;">
-        <div style="font-weight:700; font-size:0.92rem; margin-bottom:6px;">${item.q}</div>
-        ${item.opts.map((opt, oIdx) => `
-          <button class="quiz-option" id="fq-${qIdx}-${oIdx}" onclick="pickFinalOpt(${qIdx}, ${oIdx})">${opt}</button>
-        `).join('')}
-      </div>
-    `).join('');
-  }
-
-  function pickFinalOpt(qIdx, oIdx) {
-    finalAnswers[qIdx] = oIdx;
-    finalQuestions[qIdx].opts.forEach((_, i) => {
-      const btn = document.getElementById(`fq-${qIdx}-${i}`);
-      btn.classList.remove('selected-opt', 'correct-opt', 'wrong-opt');
-      if (i === oIdx) btn.classList.add('selected-opt');
-    });
-  }
-
-  function checkFinalQuiz() {
-    if (Object.keys(finalAnswers).length < finalQuestions.length) {
-      showFeedback('fb-finalquiz', 'err', 'Bitte beantworte zuerst alle 5 Fragen!');
-      return;
-    }
-    let score = 0;
-    finalQuestions.forEach((item, qIdx) => {
-      const chosen = finalAnswers[qIdx];
-      const btn = document.getElementById(`fq-${qIdx}-${chosen}`);
-      btn.classList.remove('selected-opt');
-      if (chosen === item.ans) {
-        btn.classList.add('correct-opt');
-        score++;
-      } else {
-        btn.classList.add('wrong-opt');
-      }
-    });
-    if (score === finalQuestions.length) {
-      showFeedback('fb-finalquiz', 'ok', `🎉 5 von 5 Fragen richtig! Du hast das Thema vollständig verstanden. Trage jetzt unten deinen Namen ein und sichere den Hefteintrag!`);
-      document.getElementById('status-st5-q1').textContent = '✓ 5/5';
-    } else {
-      showFeedback('fb-finalquiz', 'err', `Du hast ${score} von 5 Fragen richtig. Korrigiere die rot markierten Fragen!`);
-    }
-  }
-
-  function updateStudentName() {
-    const val = document.getElementById('studentNameInput').value.trim();
-    document.getElementById('displayStudentName').textContent = val || '______________________';
-  }
-
-  function toggleScreenshotMode() {
-    document.body.classList.toggle('screenshot-mode');
-  }
-
-  function showFeedback(id, type, html) {
-    const el = document.getElementById(id);
-    el.className = `feedback show ${type}`;
-    el.innerHTML = html;
-  }
-
-  // Discreet Teacher Demo Shortcut (triple-click on beaker icon)
-  let clickTimes = [];
-  document.getElementById('secretTeacherBtn').addEventListener('click', () => {
-    const now = Date.now();
-    clickTimes = clickTimes.filter(t => now - t < 800);
-    clickTimes.push(now);
-    if (clickTimes.length >= 3) {
-      clickTimes = [];
-      autoSolveDemo();
-    }
-  });
-
-  function autoSolveDemo() {
-    // Fill all drop slots
-    document.querySelectorAll('.drop-slot').forEach(s => {
-      s.textContent = s.dataset.ans;
-      s.dataset.placedVal = s.dataset.ans;
-      s.classList.add('filled', 'correct');
-    });
-    // Fill all cloze selects
-    document.querySelectorAll('select.cloze-select').forEach(s => {
-      if (s.dataset.ans) {
-        s.value = s.dataset.ans;
-        s.classList.add('correct');
-      }
-    });
-    ['st1-app', 'st1-proto', 'st1-lzk1', 'st2-arrows', 'st2-subs', 'st3-demokrit', 'st3-dalton', 'st3-rules', 'st3-vol', 'st4-part', 'st4-beak'].forEach(id => completedTasks.add(id));
-    updateGlobalProgress();
-    alert('Lehrkraft-Vorschau aktiviert: Alle Lücken und Zuordnungen wurden zur Demonstration ausgefüllt.');
-  }
-
-  // Init
-  renderChemieMobile();
-  renderFinalQuiz();
-</script>
-</body>
-</html>
