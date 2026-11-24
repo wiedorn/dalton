@@ -704,6 +704,22 @@
     gap: 4px;
   }
 
+  /* Station 5 Final Quiz */
+  .final-q-block {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .final-q-title {
+    font-weight: 700;
+    font-size: 0.94rem;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+  }
+
   /* Hefteintrag Box at Bottom of Lessons 1-3 */
   .heft-unlock-box {
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -820,7 +836,7 @@
 <header>
   <div class="header-top">
     <div class="brand">
-      <div class="brand-icon" id="secretTeacherBtn" title="Chemie 9 SG">⚗️</div>
+      <div class="brand-icon" id="secretTeacherBtn" title="Chemie 9 SG (3× Tippen = Lehrkraft-Freischaltung)">⚗️</div>
       <div>
         <h1>Wasser-Elektrolyse &amp; Atommodell nach Dalton</h1>
         <p>Interaktive Lernlektion · Chemie 9 (Sprachliches Gymnasium Bayern)</p>
@@ -1803,6 +1819,13 @@
 
   document.getElementById('heftDateSpan').textContent = new Date().toLocaleDateString('de-DE');
 
+  function showFeedback(id, type, html) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.className = `feedback show ${type}`;
+    el.innerHTML = html;
+  }
+
   function syncHeftInlineTexts() {
     document.querySelectorAll('select.cloze-select').forEach(sel => {
       let span = sel.nextElementSibling;
@@ -2374,3 +2397,307 @@
       svg: `<g transform="translate(35,32)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(65,42)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
             <g transform="translate(44,66)"><circle cx="0" cy="0" r="9" fill="#ef4444"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>`
+    },
+    {
+      id: 'b6', num: 6, label: 'Stoff C (AB Aufg. 6)', ans: 'Stoffgemisch',
+      svg: `<g transform="translate(34,32)"><circle cx="0" cy="0" r="9" fill="#3b82f6"/><circle cx="0" cy="-11" r="4.5" fill="#fff" stroke="#475569"/><circle cx="-9" cy="7" r="4.5" fill="#fff" stroke="#475569"/><circle cx="9" cy="7" r="4.5" fill="#fff" stroke="#475569"/></g>
+            <g transform="translate(65,36) rotate(20)"><circle cx="-7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/><circle cx="7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/></g>
+            <g transform="translate(45,67) rotate(-15)"><circle cx="-7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/><circle cx="7" cy="0" r="8" fill="#60a5fa" stroke="#1d4ed8"/></g>`
+    },
+    {
+      id: 'b7', num: 7, label: 'Becherglas', ans: 'Stoffgemisch',
+      svg: `<circle cx="34" cy="34" r="10" fill="#fde047" stroke="#ca8a04"/>
+            <g transform="translate(64,40) rotate(25)"><circle cx="-6" cy="0" r="7" fill="#ef4444"/><circle cx="6" cy="0" r="7" fill="#ef4444"/></g>
+            <circle cx="42" cy="67" r="10" fill="#fde047" stroke="#ca8a04"/>`
+    },
+    {
+      id: 'b8', num: 8, label: 'Becherglas', ans: 'Stoffgemisch',
+      svg: `<g transform="translate(35,32)"><circle cx="0" cy="0" r="8" fill="#ef4444"/><circle cx="-8" cy="6" r="4" fill="#fff" stroke="#475569"/><circle cx="8" cy="6" r="4" fill="#fff" stroke="#475569"/></g>
+            <g transform="translate(62,48)"><circle cx="0" cy="0" r="8" fill="#1e293b"/><circle cx="-11" cy="4" r="7" fill="#ef4444"/><circle cx="11" cy="-4" r="7" fill="#ef4444"/></g>
+            <g transform="translate(38,68)"><circle cx="0" cy="0" r="8" fill="#ef4444"/><circle cx="-8" cy="6" r="4" fill="#fff" stroke="#475569"/><circle cx="8" cy="6" r="4" fill="#fff" stroke="#475569"/></g>`
+    }
+  ];
+
+  function renderStation4() {
+    const pGrid = document.getElementById('particleCardsGrid');
+    pGrid.innerHTML = particleItems.map(item => `
+      <div class="beaker-card" id="card-${item.id}">
+        <div class="beaker-title"><span class="num-badge">${item.num}</span> ${item.label}</div>
+        <svg viewBox="0 0 100 90" style="width:105px; height:85px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0;">
+          ${item.svg}
+        </svg>
+        <select class="cloze-select particle-sel" data-card="card-${item.id}" data-ans="${item.ans}" style="width:100%;">
+          <option value="">– auswählen –</option>
+          <option value="Atom">Atom</option>
+          <option value="Molekül">Molekül</option>
+        </select>
+      </div>
+    `).join('');
+
+    const bGrid = document.getElementById('beakerCardsGrid');
+    bGrid.innerHTML = beakerItems.map(item => `
+      <div class="beaker-card" id="card-${item.id}">
+        <div class="beaker-title"><span class="num-badge">${item.num}</span> ${item.label}</div>
+        <svg viewBox="0 0 100 95" style="width:105px; height:95px; background:#f8fafc; border-radius:10px; border:1px solid #e2e8f0;">
+          <path d="M18,12 L18,82 Q18,88 24,88 L76,88 Q82,88 82,82 L82,12" fill="#ffffff" stroke="#64748b" stroke-width="2.5"/>
+          ${item.svg}
+        </svg>
+        <select class="cloze-select beaker-sel" data-card="card-${item.id}" data-ans="${item.ans}" style="width:100%;">
+          <option value="">– auswählen –</option>
+          <option value="Element">Element</option>
+          <option value="Verbindung">Verbindung</option>
+          <option value="Stoffgemisch">Stoffgemisch</option>
+        </select>
+      </div>
+    `).join('');
+  }
+
+  function checkParticlesMobile() {
+    const selects = document.querySelectorAll('.particle-sel');
+    let allOk = true;
+    let empty = false;
+    selects.forEach(sel => {
+      const card = document.getElementById(sel.dataset.card);
+      if (!sel.value) empty = true;
+      if (sel.value === sel.dataset.ans) {
+        sel.classList.add('correct');
+        sel.classList.remove('wrong');
+        card.classList.add('ok');
+        card.classList.remove('bad');
+      } else {
+        sel.classList.add('wrong');
+        sel.classList.remove('correct');
+        card.classList.add('bad');
+        card.classList.remove('ok');
+        allOk = false;
+      }
+    });
+
+    if (empty) {
+      showFeedback('fb-mobile-particles', 'err', 'Bitte ordne zuerst alle 8 Teilchen zu!');
+      return;
+    }
+    if (allOk) {
+      showFeedback('fb-mobile-particles', 'ok', 'Perfekt! Ein einzelnes Kügelchen ist ein Atom – sobald zwei oder mehr Atome verbunden sind, liegt ein Molekül vor.');
+      markTaskDone('st4-part', 'status-st4-t1');
+    } else {
+      showFeedback('fb-mobile-particles', 'err', 'Einige Teilchen sind noch nicht richtig (rot). Merke: Einzelne Kugel = Atom; verbundene Kugeln = Molekül.');
+    }
+  }
+
+  function checkBeakersMobile() {
+    const selects = document.querySelectorAll('.beaker-sel');
+    let allOk = true;
+    let empty = false;
+    selects.forEach(sel => {
+      const card = document.getElementById(sel.dataset.card);
+      if (!sel.value) empty = true;
+      if (sel.value === sel.dataset.ans) {
+        sel.classList.add('correct');
+        sel.classList.remove('wrong');
+        card.classList.add('ok');
+        card.classList.remove('bad');
+      } else {
+        sel.classList.add('wrong');
+        sel.classList.remove('correct');
+        card.classList.add('bad');
+        card.classList.remove('ok');
+        allOk = false;
+      }
+    });
+
+    if (empty) {
+      showFeedback('fb-mobile-beakers', 'err', 'Bitte bestimme zuerst die Stoffart für alle 8 Bechergläser!');
+      return;
+    }
+    if (allOk) {
+      showFeedback('fb-mobile-beakers', 'ok', 'Stark! Element = nur eine Atomart (egal ob Einzelatome oder Moleküle), Verbindung = eine Molekülart aus mind. 2 Atomarten, Stoffgemisch = verschiedene Teilchenarten gemischt.');
+      markTaskDone('st4-beak', 'status-st4-t2');
+    } else {
+      showFeedback('fb-mobile-beakers', 'err', 'Überprüfe die rot markierten Bechergläser noch einmal genau anhand der Atomfarben und Teilchenarten!');
+    }
+  }
+
+  // ==================== STATION 5: ABSCHLUSSCHECK ====================
+  const finalQuestions = [
+    {
+      q: '1. Welches Gas entsteht bei der Wasser-Elektrolyse am Minuspol und wie weist man es nach?',
+      options: [
+        'Sauerstoff – positives Ergebnis bei der Glimmspanprobe (Span flammt auf)',
+        'Wasserstoff – positives Ergebnis bei der Knallgasprobe (ploppendes Geräusch)',
+        'Wasserstoff – positives Ergebnis bei der Glimmspanprobe (Span erlischt)'
+      ],
+      correct: 1
+    },
+    {
+      q: '2. Welche Aussage über Elemente und Verbindungen ist richtig?',
+      options: [
+        'Verbindungen lassen sich durch physikalische Trennverfahren wie Filtrieren in Elemente zerlegen.',
+        'Elemente bestehen immer aus einzelnen unverbundenen Atomen und bilden niemals Moleküle.',
+        'Verbindungen lassen sich durch chemische Reaktionen in Elemente zerlegen; Elemente lassen sich chemisch nicht weiter zerlegen.'
+      ],
+      correct: 2
+    },
+    {
+      q: '3. Wie beschreibt das Atommodell nach Dalton eine chemische Reaktion?',
+      options: [
+        'Atome werden neu erschaffen oder zerstört, sodass neue Stoffe entstehen.',
+        'Atome bleiben erhalten und werden lediglich neu miteinander umgruppiert.',
+        'Die Atome verändern bei der Reaktion ihre Masse und Größe.'
+      ],
+      correct: 1
+    },
+    {
+      q: '4. Ein Gas besteht ausschließlich aus zweiatomigen Molekülen der gleichen Atomart (z. B. O₂). Um welche Stoffart handelt es sich?',
+      options: [
+        'Um ein Element (Reinstoff)',
+        'Um eine Verbindung (Reinstoff)',
+        'Um ein homogenes Stoffgemisch'
+      ],
+      correct: 0
+    },
+    {
+      q: '5. Warum entstehen bei der Elektrolyse von Wasser 30 mL Wasserstoff, aber nur 15 mL Sauerstoff?',
+      options: [
+        'Weil Wasserstoff-Atome doppelt so groß sind wie Sauerstoff-Atome.',
+        'Weil aus zwei Wasser-Molekülen durch Umgruppierung zwei Wasserstoff-Moleküle und ein Sauerstoff-Molekül entstehen.',
+        'Weil sich die Hälfte des Sauerstoffs sofort wieder im Wasser auflöst.'
+      ],
+      correct: 1
+    }
+  ];
+
+  const finalAnswers = {};
+
+  function renderFinalQuiz() {
+    const container = document.getElementById('finalQuizContainer');
+    container.innerHTML = finalQuestions.map((item, qIdx) => `
+      <div class="final-q-block" id="fq-block-${qIdx}">
+        <div class="final-q-title">${item.q}</div>
+        ${item.options.map((opt, oIdx) => `
+          <button class="quiz-option" id="fq-${qIdx}-${oIdx}" onclick="pickFinalOpt(${qIdx}, ${oIdx})">${opt}</button>
+        `).join('')}
+      </div>
+    `).join('');
+  }
+
+  function pickFinalOpt(qIdx, oIdx) {
+    finalAnswers[qIdx] = oIdx;
+    finalQuestions[qIdx].options.forEach((_, i) => {
+      const btn = document.getElementById(`fq-${qIdx}-${i}`);
+      btn.classList.remove('selected-opt', 'correct-opt', 'wrong-opt');
+      if (i === oIdx) btn.classList.add('selected-opt');
+    });
+  }
+
+  function checkFinalQuiz() {
+    if (Object.keys(finalAnswers).length < finalQuestions.length) {
+      showFeedback('fb-finalquiz', 'err', 'Bitte beantworte zuerst alle 5 Fragen!');
+      return;
+    }
+
+    let score = 0;
+    finalQuestions.forEach((item, qIdx) => {
+      const chosen = finalAnswers[qIdx];
+      item.options.forEach((_, oIdx) => {
+        const btn = document.getElementById(`fq-${qIdx}-${oIdx}`);
+        btn.classList.remove('selected-opt', 'correct-opt', 'wrong-opt');
+        if (oIdx === chosen) {
+          if (chosen === item.correct) {
+            btn.classList.add('correct-opt');
+            score++;
+          } else {
+            btn.classList.add('wrong-opt');
+          }
+        }
+      });
+    });
+
+    if (score === finalQuestions.length) {
+      showFeedback('fb-finalquiz', 'ok', `🏆 <strong>5 / 5 Punkten!</strong> Du beherrschst die Wasser-Elektrolyse, die Stoffeinteilung und das Dalton-Atommodell sicher!`);
+      document.getElementById('badge-st5').textContent = '✓';
+      document.getElementById('status-st5-q1').textContent = '✓ 5/5';
+      document.querySelector('[data-target="st5"]').classList.add('done');
+    } else {
+      showFeedback('fb-finalquiz', 'err', `Du hast <strong>${score} von ${finalQuestions.length}</strong> Fragen richtig beantwortet. Korrigiere die rot markierten Antworten und werte erneut aus!`);
+    }
+  }
+
+  // ==================== TEACHER QUICK-UNLOCK (3× CLICK ON ⚗️) ====================
+  let secretClicks = 0;
+  let secretTimer = null;
+  document.getElementById('secretTeacherBtn').addEventListener('click', () => {
+    secretClicks++;
+    clearTimeout(secretTimer);
+    secretTimer = setTimeout(() => { secretClicks = 0; }, 900);
+    if (secretClicks >= 3) {
+      secretClicks = 0;
+      unlockAllForTeacher();
+    }
+  });
+
+  function unlockAllForTeacher() {
+    // Fill all drop slots
+    document.querySelectorAll('.drop-slot').forEach(slot => {
+      const ans = slot.dataset.ans;
+      slot.textContent = ans;
+      slot.dataset.placedVal = ans;
+      slot.classList.add('filled', 'correct');
+      slot.classList.remove('wrong');
+    });
+    document.querySelectorAll('.chip').forEach(c => c.classList.add('used'));
+
+    // Fill Station 2 substances
+    document.querySelectorAll('.bucket-items').forEach(b => b.innerHTML = '');
+    document.querySelectorAll('#pool-substances .chip').forEach(c => {
+      const subName = c.dataset.sub;
+      const cat = c.dataset.cat;
+      const bucket = document.getElementById(`bucket-${cat}`);
+      if (bucket) {
+        const item = document.createElement('div');
+        item.className = 'placed-item ok';
+        item.dataset.sub = subName;
+        item.dataset.trueCat = cat;
+        item.dataset.placedCat = cat;
+        item.innerHTML = `<span>${subName}</span><span class="del-x" style="font-size:0.75rem; opacity:0.6;">✕</span>`;
+        bucket.appendChild(item);
+      }
+    });
+
+    // Fill all cloze & card selects
+    document.querySelectorAll('select.cloze-select').forEach(sel => {
+      sel.value = sel.dataset.ans;
+      sel.classList.add('correct');
+      sel.classList.remove('wrong');
+      if (sel.dataset.card) {
+        document.getElementById(sel.dataset.card).classList.add('ok');
+      }
+    });
+
+    // Mark all 11 tasks done
+    [
+      ['st1-app', 'status-st1-t1'],
+      ['st1-proto', 'status-st1-t2'],
+      ['st1-lzk1', 'status-st1-q1'],
+      ['st2-arrows', null],
+      ['st2-subs', 'status-st2-all'],
+      ['st3-demokrit', 'status-st3-dem'],
+      ['st3-dalton', 'status-st3-t1'],
+      ['st3-rules', 'status-st3-t2'],
+      ['st3-vol', 'status-st3-q1'],
+      ['st4-part', 'status-st4-t1'],
+      ['st4-beak', 'status-st4-t2']
+    ].forEach(([t, s]) => markTaskDone(t, s));
+
+    selectQuiz('lzk1', 1, true);
+    selectQuiz('demokrit', 1, true);
+    setHofmannCompletedState();
+    syncHeftInlineTexts();
+  }
+
+  // ==================== INIT ====================
+  renderStation4();
+  renderFinalQuiz();
+</script>
+</body>
+</html>
