@@ -503,12 +503,34 @@
   }
 
   /* ==================== STATION 2: EXACT TREE DIAGRAM ==================== */
+  .tree-scroll-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .tree-scroll-hint {
+    display: none;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    text-align: right;
+  }
+
+  @media (max-width: 840px) {
+    .tree-scroll-hint {
+      display: block;
+    }
+  }
+
   .tree-diagram {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 8px 0;
+    min-width: 780px;
+    padding: 6px 2px;
   }
 
   .tree-root {
@@ -516,85 +538,113 @@
     color: #fff;
     border: 2px solid #093256;
     border-radius: 10px;
-    padding: 8px 26px;
+    padding: 7px 26px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.98rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
 
   .tree-stem-v {
     width: 2px;
-    height: 18px;
+    height: 14px;
     background: #475569;
   }
 
-  .tree-branch-bar {
-    width: 52%;
-    height: 2px;
-    background: #475569;
-  }
-
-  .tree-level-2 {
+  /* Main 2-branch layout: Left = Stoffgemische | Center = Bridge | Right = Reinstoffe */
+  .tree-main-branches {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
+    grid-template-columns: 1fr auto 1.18fr;
     width: 100%;
-    gap: 10px;
+    align-items: start;
   }
 
-  .tree-mid-col {
+  .tree-branch-col {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  /* Top horizontal bracket halves connecting Stoffe to Left & Right branch centers */
+  .tree-top-arm-left {
+    width: 50%;
+    height: 14px;
+    margin-left: 50%;
+    border-top: 2px solid #475569;
+    border-left: 2px solid #475569;
+  }
+
+  .tree-top-arm-right {
+    width: 50%;
+    height: 14px;
+    margin-right: 50%;
+    border-top: 2px solid #475569;
+    border-right: 2px solid #475569;
+  }
+
+  .tree-top-bridge-bar {
+    width: 100%;
+    height: 14px;
+    border-top: 2px solid #475569;
   }
 
   .tree-box-mid {
     background: #fff;
     border: 2px solid #334155;
     border-radius: 10px;
-    padding: 7px 22px;
+    padding: 6px 20px;
     font-weight: 700;
-    font-size: 0.96rem;
+    font-size: 0.94rem;
     color: #0f172a;
     text-align: center;
+  }
+
+  .tree-sub-bracket {
+    height: 12px;
+    border-top: 2px solid #475569;
+    border-left: 2px solid #475569;
+    border-right: 2px solid #475569;
   }
 
   .tree-transition {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    font-size: 0.85rem;
+    gap: 3px;
+    font-size: 0.8rem;
     color: #475569;
     font-weight: 700;
   }
 
-  .tree-sub-split {
-    width: 52%;
-    height: 2px;
-    background: #475569;
+  .tree-slot-compact {
+    min-width: 104px;
+    max-width: 126px;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    padding: 4px 6px;
   }
 
-  .tree-level-3-wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    width: 100%;
-    gap: 10px;
-    align-items: stretch;
-  }
-
-  .tree-pair {
+  .tree-pair-left {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .tree-pair-right {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 6px;
+    width: 100%;
+    align-items: stretch;
   }
 
   .tree-leaf {
     border: 2px solid #64748b;
     border-radius: 12px;
     background: #f8fafc;
-    padding: 10px;
-    min-height: 185px;
+    padding: 8px;
+    min-height: 175px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -608,35 +658,38 @@
 
   .tree-leaf-title {
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.84rem;
+    line-height: 1.25;
     text-align: center;
     margin-bottom: 4px;
   }
 
   .tree-leaf-zb {
-    font-size: 0.8rem;
+    font-size: 0.77rem;
     font-weight: 600;
     color: var(--text-muted);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 
   .bucket-items {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     flex: 1;
   }
 
   .placed-item {
-    padding: 5px 9px;
+    padding: 4px 7px;
     border-radius: 7px;
     background: #fff;
     border: 1px solid #94a3b8;
-    font-size: 0.83rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
   }
 
   .placed-item.ok {
@@ -649,15 +702,6 @@
     background: var(--error-bg);
     border-color: var(--error);
     color: var(--error);
-  }
-
-  @media (max-width: 960px) {
-    .tree-level-2, .tree-level-3-wrapper {
-      grid-template-columns: 1fr;
-    }
-    .tree-branch-bar, .tree-sub-split {
-      display: none;
-    }
   }
 
   /* Station 4 Stoff- und Teilchenebene Cards */
@@ -768,7 +812,8 @@
   body.heft-mode .feedback,
   body.heft-mode .station-footer,
   body.heft-mode .heft-unlock-box,
-  body.heft-mode .lzk-card {
+  body.heft-mode .lzk-card,
+  body.heft-mode .tree-scroll-hint {
     display: none !important;
   }
 
@@ -824,7 +869,7 @@
   }
 
   @media print {
-    header, .heft-banner-actions, .exit-shot-pill, .no-heft, .chip-pool, .feedback, .station-footer, .heft-unlock-box, .lzk-card {
+    header, .heft-banner-actions, .exit-shot-pill, .no-heft, .chip-pool, .feedback, .station-footer, .heft-unlock-box, .lzk-card, .tree-scroll-hint {
       display: none !important;
     }
     body { background: #fff; }
@@ -1322,73 +1367,76 @@
         <div class="chip" data-sub="Eisenoxid" data-cat="Verbindungen">Eisenoxid</div>
       </div>
 
-      <!-- EXACT TREE DIAGRAM FROM WORKSHEET -->
-      <div class="tree-diagram">
-        <!-- Level 1: Stoffe -->
-        <div class="tree-root">Stoffe</div>
-        <div class="tree-stem-v"></div>
-        <div class="tree-branch-bar"></div>
+      <div class="tree-scroll-hint">↔ Bei schmalem Bildschirm im Baumdiagramm nach links/rechts wischen</div>
 
-        <!-- Level 2: Stoffgemische <--- Physikalische Trennverfahren ---> Reinstoffe -->
-        <div class="tree-level-2">
-          <div class="tree-mid-col">
-            <div class="tree-stem-v" style="height:12px;"></div>
-            <div class="tree-box-mid">Stoffgemische</div>
-            <div class="tree-stem-v" style="height:14px;"></div>
-            <div class="tree-sub-split"></div>
-          </div>
+      <!-- EXACT TREE DIAGRAM WITH LOCKED LEFT/RIGHT BRANCHES -->
+      <div class="tree-scroll-wrap">
+        <div class="tree-diagram">
+          <!-- Root: Stoffe -->
+          <div class="tree-root">Stoffe</div>
+          <div class="tree-stem-v"></div>
 
-          <div class="tree-transition">
-            <span>┄┄</span>
-            <span class="drop-slot" data-group="arrows" data-ans="Physikalische Trennverfahren">Übergang 1</span>
-            <span>┄▶</span>
-          </div>
+          <!-- Two Fixed Main Columns: Left = Stoffgemische | Center = Bridge | Right = Reinstoffe -->
+          <div class="tree-main-branches">
 
-          <div class="tree-mid-col">
-            <div class="tree-stem-v" style="height:12px;"></div>
-            <div class="tree-box-mid">Reinstoffe</div>
-            <div class="tree-stem-v" style="height:14px;"></div>
-            <div class="tree-sub-split"></div>
-          </div>
-        </div>
+            <!-- LEFT BRANCH: Stoffgemische -> Heterogen & Homogen -->
+            <div class="tree-branch-col">
+              <div class="tree-top-arm-left"></div>
+              <div class="tree-box-mid">Stoffgemische</div>
+              <div class="tree-stem-v" style="height:12px;"></div>
+              <div class="tree-sub-bracket" style="width:52%;"></div>
 
-        <!-- Level 3: 4 Leaf Boxes with Chemische Reaktionen between Verbindungen & Elemente -->
-        <div class="tree-level-3-wrapper">
-          <!-- Left Pair: Heterogene & Homogene Stoffgemische -->
-          <div class="tree-pair">
-            <div class="tree-leaf" onclick="placeSubstance('Heterogen')">
-              <div class="tree-leaf-title" style="color:#b45309;">Heterogene Stoffgemische</div>
-              <div class="tree-leaf-zb">z. B.</div>
-              <div class="bucket-items" id="bucket-Heterogen"></div>
-            </div>
-            <div class="tree-leaf" onclick="placeSubstance('Homogen')">
-              <div class="tree-leaf-title" style="color:#0369a1;">Homogene Stoffgemische</div>
-              <div class="tree-leaf-zb">z. B.</div>
-              <div class="bucket-items" id="bucket-Homogen"></div>
-            </div>
-          </div>
-
-          <!-- Center spacer -->
-          <div style="width:10px;"></div>
-
-          <!-- Right Pair: Verbindungen <--- Chemische Reaktionen ---> Elemente -->
-          <div style="display:grid; grid-template-columns: 1fr auto 1fr; gap:8px; align-items:stretch;">
-            <div class="tree-leaf" onclick="placeSubstance('Verbindungen')">
-              <div class="tree-leaf-title" style="color:#15803d;">Verbindungen</div>
-              <div class="tree-leaf-zb">z. B.</div>
-              <div class="bucket-items" id="bucket-Verbindungen"></div>
+              <div class="tree-pair-left">
+                <div class="tree-leaf" onclick="placeSubstance('Heterogen')">
+                  <div class="tree-leaf-title" style="color:#b45309;">Heterogene<br>Stoffgemische</div>
+                  <div class="tree-leaf-zb">z. B.</div>
+                  <div class="bucket-items" id="bucket-Heterogen"></div>
+                </div>
+                <div class="tree-leaf" onclick="placeSubstance('Homogen')">
+                  <div class="tree-leaf-title" style="color:#0369a1;">Homogene<br>Stoffgemische</div>
+                  <div class="tree-leaf-zb">z. B.</div>
+                  <div class="bucket-items" id="bucket-Homogen"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="tree-transition" style="flex-direction:column; gap:2px;">
-              <span style="font-size:0.78rem;">◀┄┄▶</span>
-              <span class="drop-slot" style="min-width:115px; font-size:0.78rem; padding:4px 6px;" data-group="arrows" data-ans="Chemische Reaktionen">Übergang 2</span>
+            <!-- CENTER BRIDGE: Top horizontal line + Physikalische Trennverfahren -->
+            <div class="tree-branch-col" style="padding:0 4px;">
+              <div class="tree-top-bridge-bar"></div>
+              <div class="tree-transition" style="margin-top:2px;">
+                <span>┄┄</span>
+                <span class="drop-slot tree-slot-compact" data-group="arrows" data-ans="Physikalische Trennverfahren">Übergang 1</span>
+                <span>┄▶</span>
+              </div>
             </div>
 
-            <div class="tree-leaf" onclick="placeSubstance('Elemente')">
-              <div class="tree-leaf-title" style="color:#1d4ed8;">Elemente</div>
-              <div class="tree-leaf-zb">z. B.</div>
-              <div class="bucket-items" id="bucket-Elemente"></div>
+            <!-- RIGHT BRANCH: Reinstoffe -> Verbindungen & Elemente -->
+            <div class="tree-branch-col">
+              <div class="tree-top-arm-right"></div>
+              <div class="tree-box-mid">Reinstoffe</div>
+              <div class="tree-stem-v" style="height:12px;"></div>
+              <div class="tree-sub-bracket" style="width:66%;"></div>
+
+              <div class="tree-pair-right">
+                <div class="tree-leaf" onclick="placeSubstance('Verbindungen')">
+                  <div class="tree-leaf-title" style="color:#15803d;">Verbindungen</div>
+                  <div class="tree-leaf-zb">z. B.</div>
+                  <div class="bucket-items" id="bucket-Verbindungen"></div>
+                </div>
+
+                <div class="tree-transition" style="flex-direction:column; gap:3px; padding:0 2px;">
+                  <span style="font-size:0.78rem;">◀┄┄▶</span>
+                  <span class="drop-slot tree-slot-compact" data-group="arrows" data-ans="Chemische Reaktionen">Übergang 2</span>
+                </div>
+
+                <div class="tree-leaf" onclick="placeSubstance('Elemente')">
+                  <div class="tree-leaf-title" style="color:#1d4ed8;">Elemente</div>
+                  <div class="tree-leaf-zb">z. B.</div>
+                  <div class="bucket-items" id="bucket-Elemente"></div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -2091,7 +2139,7 @@
         selectedChip = null;
       } else if (slot.dataset.placedVal) {
         releaseChip(slot.dataset.group, slot.dataset.placedVal);
-        slot.textContent = 'Hier tippen';
+        slot.textContent = slot.dataset.placeholder || 'Hier tippen';
         delete slot.dataset.placedVal;
         slot.classList.remove('filled', 'correct', 'wrong');
       }
@@ -2108,7 +2156,7 @@
 
   function resetGroup(group) {
     document.querySelectorAll(`.drop-slot[data-group="${group}"]`).forEach(slot => {
-      slot.textContent = 'Hier tippen';
+      slot.textContent = slot.dataset.placeholder || 'Hier tippen';
       delete slot.dataset.placedVal;
       slot.classList.remove('filled', 'correct', 'wrong');
     });
@@ -2637,7 +2685,6 @@
   });
 
   function unlockAllForTeacher() {
-    // Fill all drop slots
     document.querySelectorAll('.drop-slot').forEach(slot => {
       const ans = slot.dataset.ans;
       slot.textContent = ans;
@@ -2647,7 +2694,6 @@
     });
     document.querySelectorAll('.chip').forEach(c => c.classList.add('used'));
 
-    // Fill Station 2 substances
     document.querySelectorAll('.bucket-items').forEach(b => b.innerHTML = '');
     document.querySelectorAll('#pool-substances .chip').forEach(c => {
       const subName = c.dataset.sub;
@@ -2664,7 +2710,6 @@
       }
     });
 
-    // Fill all cloze & card selects
     document.querySelectorAll('select.cloze-select').forEach(sel => {
       sel.value = sel.dataset.ans;
       sel.classList.add('correct');
@@ -2674,7 +2719,6 @@
       }
     });
 
-    // Mark all 11 tasks done
     [
       ['st1-app', 'status-st1-t1'],
       ['st1-proto', 'status-st1-t2'],
@@ -2696,6 +2740,9 @@
   }
 
   // ==================== INIT ====================
+  document.querySelectorAll('.drop-slot').forEach(slot => {
+    slot.dataset.placeholder = slot.textContent.trim();
+  });
   renderStation4();
   renderFinalQuiz();
 </script>
